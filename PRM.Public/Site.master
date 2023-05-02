@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>CareBlue Patient Portal</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <div class="page">
+        <img alt="logo" src="content/images/cb_patient_logo.jpg" width="180" style="margin: 7px 0px 7px 10px;" />
+        <div class="header">
+            <div class="loginDisplay">
+                <%if (Extension.ClientSession.UserID > 0)
+                  {%>
+                Welcome <b>
+                    <%= Extension.ClientSession.LastName%>,&nbsp;<%= Extension.ClientSession.FirstName%></b><% }
+                  else
+                  {%>
+                <!--    <asp:LinkButton Text="Login" PostBackUrl="~/login.aspx" runat="server"></asp:LinkButton> -->
+                <%}%>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="fleft">
+            © 2010 - <%=DateTime.Now.Year%> &nbsp;CareBlue PracticeAdvance, LLC
+        </div>
+        <div class="fright">
+            Policies [ <a href="#" onclick="gotoPrivacyTerms()"><b>Privacy</b></a> | <a href="#"
+                onclick="gotoLegalTerms()"><b>Legal</b></a> | <a href="#" onclick="gotoBillingTerms()">
+                    <b>Billing</b></a> ]
+        </div>
+        <div style="clear: both;">
+        </div>
+        <div class="aleft">
+            &nbsp;<br />
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript" language="javascript">
+        function gotoPrivacyTerms() {
+            var location = "<%=Extension.ClientSession.WebPathRootPatient %>" + "Terms/privacy.htm";
+            window.open(location, "WindowPopup", "width=700px, height=860px, scrollbars=yes");
+        }
+        function gotoLegalTerms() {
+            var location = "<%=Extension.ClientSession.WebPathRootPatient %>" + "Terms/legal.htm";
+            window.open(location, "WindowPopup", "width=700px, height=960px, scrollbars=yes");
+        }
+        function gotoBillingTerms() {
+            var location = "<%=Extension.ClientSession.WebPathRootPatient %>" + "Terms/billing.htm";
+            window.open(location, "WindowPopup", "width=700px, height=960px, scrollbars=yes");
+        }
+    </script>
+</body>
+</html>

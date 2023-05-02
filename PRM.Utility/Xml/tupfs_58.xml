@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+                <pfs xmlns="http://www.transunion.com/namespace/pfs/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.transunion.com/namespace pfsV3.xsd">
+                <document>response</document>
+                <version>V3</version>
+                <transactionControl>
+                <subscriber>
+                <industryCode>M</industryCode>
+                <memberCode>03432412</memberCode>
+                <inquirySubscriberPrefixCode>0622</inquirySubscriberPrefixCode>
+                <password>WY31</password>
+                </subscriber>
+                <userKey>janeDoe123</userKey>
+                <queryType>CR</queryType>
+                <permissiblePurpose>
+                <endUser>
+                <organization/>
+                </endUser>
+                </permissiblePurpose>
+                <outputFormat>XML</outputFormat>
+                <referenceID>1223929ABCD</referenceID>
+                </transactionControl>
+                <product>
+                <subject>
+                <subjectRecord>
+                <indicative source="input">
+                <name>
+                <person>
+                <first>MICHAEL</first>
+                <middle/>
+                <last>ABACOMMON</last>
+                </person>
+                </name>
+                <address>
+                <street>
+                <unparsed>1 Compliant</unparsed>
+                </street>
+                <location>
+                <city>Fantasy Island</city>
+                <state>IL</state>
+                <zipCode>60750</zipCode>
+                </location>
+                </address>
+                <socialSecurity>
+                <number>76849627</number>
+                </socialSecurity>
+                <dateOfBirth>1900-01-01</dateOfBirth>
+                </indicative>
+                <indicative source="file">
+                <name>
+                <person>
+                <first>MICHAEL</first>
+                <middle/>
+                <last>ABACOMMON</last>
+                </person>
+                </name>
+                <address>
+                <street>
+                <unparsed DisplayColor="red">1 COMPLIANT  DR</unparsed>
+                <number>1</number>
+                <preDirectional/>
+                <name> COMPLIANT  </name>
+                <postDirectional/>
+                <type>DR</type>
+                <unit/>
+                </street>
+                <location>
+                <city>FANTASY ISLAND</city>
+                <state>IL</state>
+                <zipCode>60750</zipCode>
+                </location>
+                </address>
+                <previousAddresses/>
+                <phone/>
+                <socialSecurity>
+                <number DisplayColor="red">666849627</number>
+                </socialSecurity>
+                <dateOfBirth/>
+                </indicative>
+                <calculations>
+                <dti>30</dti>
+                <residualIncome>996</residualIncome>
+                <fpl>149</fpl>
+                <availableCredit>8136</availableCredit>
+                </calculations>
+                <scores>
+                <scoreModel>
+                <code>New Account</code>
+                <score>
+                <results>+639</results>
+                <derogatoryAlert>false</derogatoryAlert>
+                <fileInquiriesImpactedScore>false</fileInquiriesImpactedScore>
+                <factors>
+                <factor>
+                <rank>1</rank>
+                <code>019</code>
+                </factor>
+                <factor>
+                <rank>2</rank>
+                <code>026</code>
+                </factor>
+                <factor>
+                <rank>3</rank>
+                <code>031</code>
+                </factor>
+                <factor>
+                <rank>4</rank>
+                <code>069</code>
+                </factor>
+                </factors>
+                <scoreCard>11</scoreCard>
+                </score>
+                </scoreModel>
+                <scoreModel>
+                <code>Recovery</code>
+                <score>
+                <results/>
+                <derogatoryAlert/>
+                <fileInquiriesImpactedScore/>
+                <scoreCard/>
+                </score>
+                </scoreModel>
+                </scores>
+                <determinationStatus>
+                <accuracy DisplayColor="YELLOW">Investigate Warnings</accuracy>
+                <financialAid DisplayColor="YELLOW">101 to 200 FPL</financialAid>
+                <collection DisplayColor="YELLOW">&gt; $5000 Available</collection>
+                <riskIndicator/>
+                <redFlag/>
+                <warnings>SSN issued: 1984-0000; state:TX; (est. Age obtained: +00 to xx)</warnings>
+                <warnings>INPUT SUBJECT SSN DOES NOT MATCH FILE SSN</warnings>
+                </determinationStatus>
+                <creditReport>
+                <pullDate>2013-07-18 00:55:24.183</pullDate>
+                <printImage><![CDATA[                                                                                                                                                                                                                TRANSUNION CREDIT REPORT                                                                                                        <FOR>          <SUB NAME>          <MKT SUB>  <INFILE>   <DATE>      <TIME>  (I) M TR3432412 MEDICAL             32 QU     12/00      07/18/13    00:55CT                                                                              <SUBJECT>                                          <SSN>                     ABACOMMON, MICHAEL                                 666-84-9627               <CURRENT ADDRESS>                                               <DATE RPTD>  1 COMPLIANT DR., FANTASY ISLAND IL. 60750                        7/13        <CURRENT EMPLOYER AND ADDRESS>                            <RPTD>             FICO                                                                                                                                    7/13              <FORMER EMPLOYER AND ADDRESS>                                                FAIR ISAAC                                                                   SAN RAFAEL CA.                                             7/13                                  ***WARNING  INTERNAL USE ONLY - NOT FOR RESALE***        ---------------------------------------------------------------------------- S P E C I A L   M E S S A G E S                                              ***ID MISMATCH ALERT: INPUT SUBJECT SSN DOES NOT MATCH FILE SSN***           ****SSN YEAR OF ISSUANCE :FILE SSN ISSUED: 1984; STATE: TX***                ***OFAC NAME SCREEN ALERT - CLEAR***                                         ---------------------------------------------------------------------------- M O D E L   P R O F I L E                                                    ***NEW ACCT MODEL 2.0 SCORE +639  : 019, 026, 031, 069 ***                   ---------------------------------------------------------------------------- C R E D I T   S U M M A R Y      * * *    T O T A L  F I L E  H I S T O R Y  PR=1  COL=2  NEG=0  HSTNEG=4-5   TRD=18 RVL=12 INST=6  MTG=0  OPN=0  INQ=8                 HIGH CRED  CRED LIM  BALANCE  PAST DUE  MNTHLY PAY AVAILABLE   REVOLVING:    $5128      $23.6K    $13.3K   $0        $148       43%         INSTALLMENT:  $28.2K     $         $9995    $         $233                   TOTALS:       $33.3K     $23.6K    $23.3K   $0        $381                   ---------------------------------------------------------------------------- P U B L I C   R E C O R D S                                                  SOURCE    DATE     LIAB     ECOA COURT  ASSETS  PAID  DOCKET#                TYPE                                                  PLAINTIFF/ATTORNEY     Z 4841322 12/10R            I    CC             6/11  92                     PAID CIVIL JUDGMENT                                   NYS/GRIFFITH           ---------------------------------------------------------------------------- C O L L E C T I O N S                                                        SUBNAME       SUBCODE   ECOA OPENED  CLOSED $PLACED  CREDITOR            MOP ACCOUNT#                     VERIFIED       BALANCE  REMARKS                 CAPITAL CRDT  Y 596D001 I    10/12          $101     TEST                O9B 361314                        5/13M         $101     PLACED FOR COLLECTIO                                                                                 CAPITAL CRDT  Y 596D001 I     3/12                   TEST                O9B 2047944                       3/13M         $97.5K   PLACED FOR COLLECTIO    ---------------------------------------------------------------------------- T R A D E S                                                                  SUBNAME      SUBCODE   OPENED  HIGHCRED TERMS     MAXDELQ  PAYPAT  1-12 MOP  ACCOUNT#               VERFIED CREDLIM  PASTDUE   AMT-MOP  PAYPAT 13-24      ECOA COLLATRL/LOANTYPE CLSD/PD BALANCE  REMARKS                MO 30/60/90   GDYR/CBUSA   A 976A016  9/06   $202                        111111111111 R01  77530100                7/13V  $1300                       111111111         I    2000 JETTA GL      6/08P  $0                             21   0/ 0/ 0                                                                                CITIBANKNA   B 9797005  5/11   $1500                       1XXXXXXXXXX1 R01  1281                    7/13V           $0                 X1XXX1XX11        C    LINE OF CREDIT            $1164                          22   0/ 0/ 0                                                                                DISCOVER FIN B 9616003  1/02   $0                          111111111111 R01  6011                    6/13V           $0                 111111111111      I    CREDIT CARD       10/08P  $0                             24   0/ 0/ 0                                                                                CITI         B 64DB001  4/08   $0       MIN148             111111111111 R01  4271                    6/13V  $14.0K                      111111111111      I    CREDIT CARD               $12.2K                         48   0/ 0/ 0                                                                                HUDSON CRDTU Q 73RK001 10/12   $11.5K   60M233             111111111111 I01  85337013                6/13V                              1X11111211        I    AUTOMOBILE                $9995                          22   1/ 0/ 0                                                                                BLOOM/FDSB   D 989D002 12/00   $315                                     R01  60                      5/13V  $200                                          I                      11/04P  $0                                                                                                                         BK 1 CARE CC B 328Q016  3/12   $4500                       111111111111 R01  4                       5/13V  $4500                                         I    CREDIT CARD        9/12C  $0       ACCT CLSD BY CONSUMER 12   0/ 0/ 0                                                                                CITI         B 8213018  1/10   $9800                       111111111112 R01  43                      3/13V  $9800                       1111111           I    CREDIT CARD        8/11C  $0       ACCT CLSD BY CONSUMER 19   1/ 0/ 0                                                                                GECRB/IKEA   Q 235032Y  6/11   $750                        111111111111 R01  815                     6/12V  $800                        1                 A                       6/12P  $0                             13   0/ 0/ 0                                                                                IBC          F 734W002  7/11   $16.7K   36M497                          I01  505624730013            9/11V                                                I    LEASE                                                                                                                                                BK OF AMER   B 1597029  5/05   $1476                                    R01  53                      7/10V  $2500                                         I    CREDIT CARD        7/10C  $0       ACCT CLSD BY CONSUMER                                                                                             CBUSASEARS   D 6256374  6/01   $361                8/09    X1321111111X R01  6483                   11/09V  $1300              $20   03 XXXXXX1           I    CHARGE ACCOUNT    10/09P  $0                             34V  1/ 1/ 0                                                                                HSBC BANK    B 1607007 10/05   $5114                       X1111111X121 I01  420349979               7/09V                              1XX11111111       I                       7/09C  $0                             23   1/ 0/ 0                                                                                HSBC MORTUSA B 1607017  2/06   $2000                       1X1111111111 R01  9                       3/09V                              111111            I                       8/08P  $0                             23V  0/ 0/ 0                                                                                CITI         B 64DB003  7/04   $0                          1111111111XX R01  4128                    4/08V  $6000    $0                 111111            I    CREDIT CARD               $0                             18   0/ 0/ 0                                                                                TD AUTO FIN  Q 624C116  5/04   $8776    M182               11           I01  160                     1/07V           $0                                   I                      11/06C  $0                              2   0/ 0/ 0                                                                                SLMA / LSCP  V 6372008 11/02   $1350    M24                             I01  50562473                5/04V           $0                                   I    STUDENT LOAN       5/04C  $0       CLOSED                                                                                                            LINCOLN SVGS B 1780004  7/01   $1500    M24                             I01  80610001430            11/03V           $0                                   I                      11/03C  $0                                            ---------------------------------------------------------------------------- I N Q U I R I E S                                                            DATE     SUBCODE         SUBNAME        TYPE    AMOUNT                        7/12/13 BPH4369125(EAS) CHASE                                                7/12/13 GCH0000199(CHI) ROGER                                                5/06/11 BSL0024069(ILM) CITIBANK N.A                                        12/14/10 NSL0050034(ILM) CITIBANK NA                                          9/24/10 BSL0024069(ILM) CITIBANK N.A                                         9/24/10 XUS0000102(CHI) TEST SUBCODE                                         9/23/10 ZNY0179210(EAS) AUTO INFO SV                                         9/23/10 ZNY0179210(EAS) AUTO INFO SV                                        ---------------------------------------------------------------------------- C R E D I T  R E P O R T  S E R V I C E D  B Y :                             TRANSUNION TEST FACILITY                                      800-888-4213   555 WEST ADAMS,CHICAGO, IL. 60661                                            Consumer disclosures can be obtained online through TransUnion at:                http://www.transunion.com                                                                                                                                                        END OF TRANSUNION REPORT                                                ]]></printImage>
+                </creditReport>
+                </subjectRecord>
+                </subject>
+                </product>
+                </pfs>

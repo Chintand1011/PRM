@@ -1,0 +1,72 @@
+﻿@using PatientPortal.Mobile
+@model PatientPortal.Mobile.Models.AddCardsModel
+@{
+    ViewBag.Title = "Add New Credit Card";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Header {
+    @Html.ActionLink("Back", "Index", "Public", null, new { data_icon = "arrow-l" })
+    <h1>Patient Payment Portal</h1>
+}
+
+@using (Html.BeginForm("AddNewCard", "Public", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+
+    <ul data-role="listview" data-inset="true">
+
+        <li data-role="fieldcontain">
+            @Html.LabelFor(m => m.FirstName)
+            @Html.TextBoxFor(m => m.FirstName)
+        </li>
+        <li data-role="fieldcontain">
+            @Html.LabelFor(m => m.LastName)
+            @Html.TextBoxFor(m => m.LastName)
+        </li>
+        <li data-role="fieldcontain">
+            @Html.LabelFor(m => m.CardNumber)
+            @Html.TextBoxFor(m => m.CardNumber)
+        </li>
+        <li data-role="fieldcontain">
+            @Html.Label("Expires", new { @class = "ui-input-text" })
+            @Html.TextBoxFor(m => m.ExpireMonth, new { style = "display:inline-block;;width:34%; vertical-align: middle;" }) /
+            @Html.TextBoxFor(m => m.ExpireYear, new { style = "display:inline-block; width: 34%; vertical-align: middle;", maxlength = "2" })
+        </li>
+        <li data-role="fieldcontain">
+            @Html.LabelFor(m => m.Zip)
+            @Html.TextBoxFor(m => m.Zip)
+        </li>
+        <li data-role="fieldcontain">
+            @Html.LabelFor(m => m.CvvSecurityID)
+            @Html.TextBoxFor(m => m.CvvSecurityID)
+        </li>
+        <li data-role="fieldcontain">
+            <input type="submit" onclick="loading();" value="Add New Card" />
+        </li>
+    </ul>
+}
+
+
+@section scripts
+{
+    <script type="text/javascript">
+
+
+        function loading() {
+
+            if ($('form').valid()) {
+
+                $.mobile.loading('show', {
+                    text: 'Processing',
+                    textVisible: true,
+                    theme: 'a',
+                    html: ""
+                });
+            }
+
+        }
+
+
+    </script>
+}

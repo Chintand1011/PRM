@@ -1,0 +1,1119 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body {
+    background-image: url('../content/images/cbpp_background.jpg');
+    background-repeat: repeat-x;
+    background-position: 0px -300px; /**background: #ffffdd;**/
+    font-size: 0.7em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI", Arial, Helvetica, Calibri, Verdana, sans-serif, "USPSIMBStandard";
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+.a {
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #325DA4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #325DA4;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #325DA4;
+    text-decoration: none;
+    outline: none;
+}
+
+a, img {
+    border: none;
+    outline: none;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6, h1p, h2p, h3p, h4p {
+    font-size: 1.0em; /*color: #ed7d23; / #666666; */
+    color: #002897;
+    text-transform: none;
+    font-weight: 200;
+}
+
+h1 /* Header Title, Only use for header text */ {
+    font-size: 2.0em;
+    color: #ee8722;
+    font-weight: 600;
+    padding: 0px 0px 0px 0px;
+    margin: 1px 0px 0px 20px;
+}
+
+p1 {
+    color: #ee8722;
+    font-size: 2.0em;
+    font-weight: 600;
+    padding: 3px 0px 0px 20px;
+    margin: 0px 0px 0px 0px;
+}
+
+h2 /* Section Title, Only use for below header */ {
+    font-size: 1.25em;
+    line-height: 1.5em;
+    color: #002897;
+    font-weight: 600;
+    padding: 0px 0px 20px 10px;
+    margin-bottom: 0px;
+}
+
+p2 {
+    color: #ee8722;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 5px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+h3 /* Message Box Title */ {
+    font-size: 1.3em; /*color: #ed7d23; / #666666; */
+    line-height: 1.5em;
+    color: #e97824;
+    font-weight: 400;
+    padding: 0px 0px 0px 10px;
+    margin-top: -10px;
+}
+
+p3 {
+    font-size: 1.2em;
+    color: #002897;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+h4 /* Main Body Text */ {
+    font-size: 1.3em;
+    line-height: 1.4em;
+    color: #002897;
+    font-weight: 400;
+    padding: 0px 0px 0px 10px;
+    margin-top: -10px;
+}
+
+p4 {
+    font-size: 1.2em;
+    color: black;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+h5 /* Message Box Text */ {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    color: #002897;
+    font-weight: 400;
+    padding: 0px 0px 0px 10px;
+    margin-top: -10px;
+}
+
+p5 {
+    font-size: 1.2em;
+    color: #002897;
+    font-weight: 400;
+    margin: 10px 30px 0px 0px;
+    padding: 0px 0px 0px 10px;
+}
+
+h6 {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    color: black;
+    font-weight: 400;
+    padding: 0px 0px 0px 10px;
+    margin-top: -10px;
+}
+
+p6 {
+    font-size: 1em;
+}
+
+h7 {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #000000;
+    font-weight: 400;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+h1p /* Header Title Popups */ {
+    font-size: 1.6em;
+    color: #002897;
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
+h2p /* Section Title */ {
+    font-size: 1.6em;
+    color: #e97824;
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
+h3p /* Section Title */ {
+    font-size: 1.3em;
+    color: #002897;
+    font-weight: 300;
+}
+
+h4p /* Section Title */ {
+    font-size: 1.2em;
+    color: #002897;
+    font-weight: 300;
+}
+
+h5p /* Section Title */ {
+    font-size: 1.0em;
+    color: #002897;
+    font-weight: 500;
+}
+
+pfs1 {
+    font-size: 1.4em;
+    color: #002897;
+    font-weight: 500;
+    line-height: 1.8em;
+}
+
+pfs2 {
+    font-size: 1.1em;
+    color: #3b3b3b;
+    font-weight: 500;
+    line-height: 1.6em;
+}
+
+pfs3 {
+    font-size: 1.0em;
+    color: #002897;
+    font-weight: 300;
+    line-height: 1.6em;
+}
+
+pfs4 {
+    font-size: 1.2em;
+    color: #002897;
+    font-weight: 400;
+    line-height: 1.0em;
+}
+
+pfs5 {
+    font-size: 1.6em;
+    color: #002897;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+pfs6 {
+    font-size: 1.3em;
+    color: #002897;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+pfs7 {
+    font-size: 1.2em;
+    color: #002897;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page {
+    width: 1200px;
+    display: table;
+    background-color: #fff;
+    border: 1px solid #325DA4;
+    border-radius: 10px;
+    margin: 20px auto 0px auto;
+    padding-bottom: 20px;
+}
+
+.header {
+    background-image: url('../content/images/top_menu_background.gif');
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    margin: 0px;
+    min-height: 26px;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+
+    .header h1 {
+        font-weight: 700;
+        margin: 0px;
+        padding: 0px 0px 0px 20px;
+        color: #f9f9f9;
+        border: none;
+        line-height: 2em;
+        font-size: 2em;
+    }
+
+.main {
+    position: relative;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 12px 0px 12px;
+    min-height: 560px;
+}
+
+.txtDateTime {
+    float: right;
+    margin: 5px 10px 0px -150px;
+    color: #002897;
+}
+
+.txtLogout-ppw {
+    float: right;
+    margin: 20px 20px -10px 0px;
+    padding: 0px 0px 0px 0px;
+    color: #dc6c12;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.txtLogout-ppp {
+    float: right;
+    margin: 15px 25px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    color: #dc6c12;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.form-row-login {
+    float: left;
+    width: 25%;
+    padding-bottom: 0px;
+    padding-top: 10px;
+    margin: 20px 0px 0px 40px;
+}
+
+.pgColumn1 {
+    float: left;
+    width: 19%;
+    position: relative;
+    background: transparent url('../content/images/hdr_msgbox.jpg') no-repeat 0px 0px;
+    margin: 20px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
+    min-height: 500px;
+}
+
+.pgColumn2 {
+    float: left;
+    width: 79%;
+    position: relative;
+    background: transparent url('../content/images/hdr_titlebox.jpg') no-repeat 0px 0px;
+    margin: 20px 0px 0px 0px;
+    padding: 0px 10px 0px 0px;
+    height: auto;
+}
+
+.txtActivePtBox {
+    float: left;
+    margin: 15px 0px 0px 10px;
+    position: relative;
+    background: transparent url('../content/images/hdr_activebox_red_long.gif') no-repeat 0px 0px;
+    min-height: 35px;
+    min-width: 350px; /* old width was 260px for hdr_activebox_red.gif */
+}
+
+.txtActivePtControl {
+    float: left;
+    margin: 11px 0px 0px 10px;
+}
+
+.txtActivePtName {
+    float: right;
+    margin: -18px 0px 0px 23px; /* old was margin: -16px 0px 0px 23px; */
+    position: absolute;
+    color: #cc3333;
+    font-size: 1.5em; /* old width was 1.3em */
+    line-height: 1.0em;
+    font-weight: 600; /* old width was bold */
+}
+
+.hdrTitle {
+    float: left;
+    width: 65%;
+    position: relative;
+    background: transparent url('../content/images/hdr_titlebox.gif') no-repeat 0px 0px;
+    margin: 15px 0px 0px 10px;
+    padding: 0px 10px 0px 0px;
+    min-height: 35px;
+}
+
+.txtProviderNote {
+    float: left;
+    margin: 5px 5px 0px 20px;
+    padding: 0px 0px 0px 0px;
+    color: #cc3333;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.bodyMain {
+    float: left;
+    width: 99%;
+    position: relative;
+    margin: 0px 0px 0px 5px;
+    min-height: 200px;
+}
+
+.leftCol {
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.pgHeader {
+    position: absolute;
+    background-image: url('../content/images/hdr_msgbox.jpg'), url('../content/images/hdr_titlebox.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0px 0px, 210px 0px;
+    margin: 0px 0px 0px 0px;
+    min-height: 520px;
+}
+
+.footer {
+    width: 1190px;
+    color: #002897;
+    padding: 5px 0px 0px 0px;
+    margin: 0px auto;
+    font-size: 1.05em;
+    line-height: normal;
+}
+
+.CareBluePopup {
+    height: 100%;
+    width: 97%; /* background-color: white; */
+    border-collapse: collapse;
+    border: 0px solid black;
+    border-spacing: 20px;
+    margin: 8px 10px 0px 10px;
+}
+
+    .CareBluePopup tr, .CareBluePopup td {
+        border-collapse: collapse;
+        border: 0px solid blue;
+    }
+
+    .CareBluePopup td {
+        padding-bottom: .25em;
+    }
+
+table#receipt {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.ExtraPad {
+    padding-top: 1.0em;
+}
+
+.ReducePad {
+    margin: 0 0 4px 0;
+}
+
+.aleft {
+    text-align: left;
+}
+
+.amiddle {
+    text-align: center;
+}
+
+.aright {
+    text-align: right;
+}
+
+.fleft {
+    float: left;
+}
+
+.fmiddle {
+    float: center;
+}
+
+.fright {
+    float: right;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink {
+    background-color: #3a4f63;
+    width: 100%;
+}
+
+div.menu {
+    padding: 4px 0px 4px 8px;
+}
+
+    div.menu ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+    }
+
+        div.menu ul li a, div.menu ul li a:visited {
+            background-color: #465c71;
+            border: 1px #4e667d solid;
+            color: #dde4ec;
+            display: block;
+            line-height: 1.35em;
+            padding: 4px 20px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+            div.menu ul li a:hover {
+                background-color: #bfcbd6;
+                color: #465c71;
+                text-decoration: none;
+            }
+
+            div.menu ul li a:active {
+                background-color: #465c71;
+                color: #cfdbe6;
+                text-decoration: none;
+            }
+
+.bolder {
+    font-weight: bolder;
+}
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+    fieldset p {
+        margin: 2px 12px 10px 10px;
+    }
+
+    fieldset.login label, fieldset.register label, fieldset.changePassword label {
+        display: block;
+    }
+
+    fieldset label.inline {
+        display: inline;
+    }
+
+legend {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry {
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry {
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo {
+    width: 42%;
+}
+
+input.textEntry-login {
+    width: 120px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry-login {
+    width: 120px;
+    border: 1px solid #ccc;
+}
+
+
+
+/* MISC  
+----------------------------------------------------------*/
+
+
+
+.clear {
+    clear: both;
+}
+
+.title {
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.align-error-messages {
+    float: right;
+    margin-right: 100px;
+}
+
+.loginDisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+    .loginDisplay a:link {
+        color: white;
+    }
+
+    .loginDisplay a:visited {
+        color: white;
+    }
+
+    .loginDisplay a:hover {
+        color: white;
+    }
+
+.failureNotification {
+    font-size: 1.2em;
+    color: #ee3424;
+    margin: -18px 0px -20px 0px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.submitButton {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.submitButton {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.btnSubmit {
+    background: url('../content/images/btn_submit.gif') no-repeat;
+}
+
+.btnLogin {
+    background: url('../content/images/btn_login.gif') no-repeat;
+}
+
+.boxLogin {
+    background: transparent url('../content/images/cbpp_loginbox.jpg') no-repeat 0px 0px;
+    margin: 0px 0px 0px 20px;
+}
+
+.form-row {
+    float: left;
+    width: 100%;
+    padding-bottom: 6px;
+    margin-left: 15px;
+}
+
+.form-row-tight {
+    float: left;
+    width: 100%;
+    padding-bottom: 6px;
+    margin-left: 0px;
+}
+
+.form-row-nopad {
+    float: left;
+    width: 100%;
+    padding-bottom: 0px;
+    margin-left: 15px;
+}
+
+.lblInputR {
+    color: #4D6231;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 5px;
+    display: block;
+}
+
+.lblInputL {
+    color: #4D6231;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 0px;
+    display: block;
+}
+
+.boxInputL {
+    float: left;
+}
+
+.boxInputR {
+    float: right;
+}
+
+.editor-label {
+    color: #4D6231;
+    font-weight: bold;
+    float: left;
+    text-align: right;
+    margin-right: 5px;
+    display: block;
+    width: 180px;
+}
+
+.editor-field {
+    float: left;
+    line-height: 1.5em;
+    font-weight: normal;
+    margin-top: 0px; /* was -2 */
+}
+
+.editor-label-tight {
+    color: #4D6231;
+    font-weight: bold;
+    float: left;
+    text-align: right;
+    margin-right: 5px;
+    display: block;
+    width: 100px;
+}
+
+/* THIS IS FROM OLD PP.PUBLIC
+.editor-label
+{
+    color: #34467e;
+    font-size: 1.0em;
+    margin: 2px 10px 0px 5px;
+    width: 90px;
+}
+*/
+.editor-label-login {
+    color: #34467e;
+    font-weight: bold;
+    font-size: 1.0em;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 0px;
+    display: block;
+    width: 90px;
+}
+
+.align-fields {
+    color: #4D6231;
+    font-weight: bold;
+    float: left;
+    text-align: right;
+    margin-right: 5px;
+    display: block;
+    width: 91px;
+}
+
+.align-label .editor-label {
+    width: 90px;
+}
+
+
+
+.editor-field-login {
+    float: left;
+    line-height: 30px;
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-top: -7px;
+}
+
+.editor-section {
+    color: #800000;
+    font-weight: 500;
+    font-size: 1.0em;
+    text-align: center;
+    margin: 0px 0px 2px 0px;
+    display: block;
+    width: 320px;
+    clear: both;
+}
+
+.editor-upload-field {
+    line-height: 21px;
+}
+
+.align-popup-fields .editor-label {
+    color: #4D6231;
+    font-weight: bold;
+    float: left;
+    text-align: right;
+    margin-right: 5px;
+    display: block;
+    width: 104px;
+}
+
+
+.submit-button {
+    padding-left: 50px;
+}
+
+.zip-code1 {
+    width: 80px;
+}
+
+.zip-code2 {
+    width: 58px;
+}
+
+.success-message {
+    color: darkgreen;
+    padding-bottom: 20px;
+    font-size: medium;
+}
+
+.set-telerik-ctrl-width {
+    width: 149px;
+}
+
+.textarea {
+    resize: none;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.margin-left-search-buttons {
+    margin-left: 228px;
+}
+
+.margin-left-search-buttons-tight {
+    margin-left: 120px;
+}
+
+.grd-search-align {
+    float: right;
+}
+
+.display-inline {
+    display: table-row;
+}
+
+.td-padding {
+    padding-left: 0px;
+    width: 0px;
+}
+
+.container {
+    display: block;
+    width: 20px;
+}
+
+.col {
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+
+.box {
+    display: block;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.credit-popup {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+
+    .credit-popup span {
+        font-weight: bold;
+    }
+
+.customprintbutton {
+    background: url(../Content/Images/printbar.gif) !important;
+}
+
+    .customprintbutton:hover {
+        background: url(../Content/Images/printbar.gif) 0 -26px !important;
+    }
+
+.clear {
+    clear: both;
+}
+
+.title {
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+    .loginDisplay a:link {
+        color: white;
+    }
+
+    .loginDisplay a:visited {
+        color: white;
+    }
+
+    .loginDisplay a:hover {
+        color: white;
+    }
+
+.failureNotification {
+    font-size: 1.2em;
+    color: #ee3424;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.submitButton {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.btnSubmit {
+    background: url('../content/images/btn_submit.gif') no-repeat;
+}
+
+.btnLogin {
+    background: url('../content/images/btn_login.gif') no-repeat;
+}
+
+.boxLogin {
+    background: transparent url('../content/images/cbpp_loginbox.jpg') no-repeat 0px 0px;
+    margin: 25px 0px 0px 30px;
+}
+
+.cursor-default {
+    cursor: default !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.disable-button {
+    -ms-opacity: 0.5 !important;
+    opacity: 0.5 !important;
+    cursor: default !important;
+}
+
+
+/* BUTTON CSS  
+----------------------------------------------------------*/
+
+.btn-cancel {
+}
+
+.btn-submit {
+}
+
+.btn-search {
+}
+
+.btn-new {
+}
+
+.btn-update {
+}
+
+.btn-add {
+}
+
+.btn-run-new {
+}
+
+.btn-create-new {
+}
+
+.btn-create-new {
+}
+
+.btn-ok {
+}
+
+.btn-clear {
+}
+
+.btn-assign {
+}
+
+.btn-add-new {
+}
+
+.btn-close {
+}
+
+.btn-activate {
+}
+
+.btn-select {
+}
+
+.btn-print {
+}
+
+.btn-download {
+}
+
+.btn-edit {
+}
+
+.btn-process {
+}
+
+.btn-no-goback {
+}
+
+.btn-yes-cancel {
+}
+
+.btn-edit-small {
+}
+
+.btn-next {
+}
+
+.btn-estimate {
+}
+
+.btn-terminate {
+}
+
+
+
+.btn-pop-next {
+    float: right;
+    margin: 20px 10px;
+}
+
+.btn-pop-edit {
+    margin: 20px 0 0 133px;
+}
+
+.btn-largepop-edit {
+    margin: 20px 0 0 327px;
+}
+
+.btn-pop-cancel {
+    float: left;
+    margin: 20px 0 0 10px;
+}
+
+.btn-pop-submit {
+    float: right;
+    margin: 20px 10px;
+}
+
+.btn-no-goback {
+    float: left;
+    margin-left: 10px;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-yes-cancel {
+    float: right;
+    margin-right: 10px;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*Quick Pay Button*/
+
+.quick-pay-align {
+    margin-top: 3.3pt !important;
+    cursor: pointer !important;
+    border: 0 !important;
+    background: none !important;
+}
+
+.quick-pay-align.disable-button {
+    cursor: default !important;
+}
+
+/* RAD PANEL BAR CSS  
+----------------------------------------------------------*/
+
+.RadPanelBar .form-row {
+    margin-left: 0 !important;
+}
+
+
+.RadPanelBar.RadPanelBar_Default {
+    padding: 0 10px 0 3px;
+}
+
+
+.EligibilityImageButton {
+    padding: 2px 0px 0px 14px !important;
+}
+
+.Hidden input {
+    display:none;
+}
+
+.rpLink.rpExpandable.rpSelected.rpExpanded {
+     background-position: 0 -401px !important;
+     border-color: #6c6c6c;
+}
+
+.rpLink.rpExpandable.rpSelected {
+    background-position: 0 -1px !important;
+    border-color: #ebebeb;
+}
+
+

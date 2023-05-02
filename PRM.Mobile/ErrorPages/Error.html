@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/Content/jquery.mobile-1.2.0.css" rel="stylesheet" />
+    <link href="/Content/jquery.mobile.structure-1.2.0.css" rel="stylesheet" />
+    <link href="/Content/jquery.mobile.theme-1.2.0.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+</head>
+<body>
+    <div data-role="page" data-theme="b">
+        <div data-role="content">
+            <div data-role="content">
+                <div data-role="popup" id="popupBasic" data-overlay-theme="c">
+                    <div data-role="header">
+                        <h3>Information</h3>
+                    </div>
+                    <a href="#" onclick="window.history.back();" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                    <div data-role="content">
+                        <p>Sorry, Something went wrong!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="/Scripts/jquery-1.8.2.js"></script>
+
+    <script>
+        $(document).on("mobileinit", function () {
+            $.mobile.ajaxEnabled = false;
+        });
+    </script>
+    <script src="/Scripts/jquery.mobile-1.2.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#popupBasic").popup('open');
+        });
+
+    </script>
+
+</body>
+</html>

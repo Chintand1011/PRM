@@ -1,0 +1,242 @@
+﻿.title-div
+{
+    width: 768px;
+    border: 3px solid darkblue;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.main-div
+{
+    width: 768px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+body
+{
+    font-size: 0.8em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI", Calibri, Arial, Helvetica, Verdana, sans-serif;
+    color: #000000;
+}
+
+.a
+{
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+    text-decoration: none;
+    outline: none;
+}
+
+a, img
+{
+    border: none;
+    outline: none;
+}
+
+p
+{
+    font-size: 0.6em;
+    line-height: 1.0em;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, h7
+{
+    font-size: 1.0em; /*color: #ed7d23; / #666666; */
+    color: #002897;
+    text-transform: none;
+    font-weight: 200;
+}
+
+h1 /* Header Title, Only use for header text */
+{
+    font-size: 1.4em;
+    color: #000000;
+    font-weight: 600;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+h2 /* Section Title, Only use for below header */
+{
+    font-size: 1.6em;
+    line-height: 1.3em;
+    color: #002897;
+    font-weight: 600;
+    padding: 15px 10px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+h3 /* Message Box Title */
+{
+    font-size: 0.95em;
+    line-height: 1.3em;
+    color: #000000;
+    font-weight: 200;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+}
+h4 /* Main Body Text */
+{
+    font-size: 0.8em;
+    line-height: 1.0em;
+    color: #000000;
+    font-weight: 300;
+    padding: 0px 0px 0px 0px;
+    margin: 5px 0 5px 3px;
+}
+h5 /* Message Box Text */
+{
+    font-size: 1.6em;
+    line-height: 1.3em;
+    color: #002897;
+    font-weight: 600;
+    padding: 15px 10px 15px 0px;
+    margin: 0px 0px 0px 0px;
+}
+h6
+{
+    font-size: 1.2em;
+    line-height: 1.2em;
+    color: #e97824;
+    font-weight: 600;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+}
+h7
+{
+    font-size: 1.0em;
+    line-height: 1.2em;
+    color: #000000;
+    font-weight: 600;
+    padding: 0px 0px 0px 0px;
+    margin: 3px 0px 0px 3px;
+}
+
+
+.ExtraPad
+{
+    padding-top: 0.5em;
+}
+
+.ExtraPad2
+{
+    padding-top: 1.5em;
+}
+
+.ExtraPadTbl
+{
+    height: 30px;
+    vertical-align: bottom
+}
+.ExtraPadTbl1
+{
+    height: 10px;
+    vertical-align: bottom
+}
+.ExtraPadTbl2
+{
+    height: 38px;
+    vertical-align: bottom
+}
+
+.clear
+{
+    clear: both;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.application-information
+{
+    border-collapse: separate;
+    border-spacing: 7px;
+}
+.application-information td
+{
+    border: 1px solid black;
+}
+.appInfo-col1
+{
+    width: 213px;
+}
+.appInfo-col2
+{
+    width: 70px;
+}
+        
+.appInfo-col3
+{
+    width: 136px;
+}
+        
+.style1
+{
+    width: 381px;
+}
+        
+ul li
+{
+    margin-top: 0px; /* was adjusted from 5px to 0 b/c it interfered with the display of rad window notification title bar */
+}
+
+table td
+{
+    padding: 0;
+}
+.style2
+{
+    width: 165px;
+}
+        
+.appInfo-col4
+{
+    width: 150px;
+}
+        
+.style3
+{
+    width: 110px;
+}
+        
+.style4
+{
+    width: 291px;
+}
+.style5
+{
+    width: 113px;
+}
+        
+.style6
+{
+    width: 164px;
+}
+
+.pagebreak 
+{ 
+    page-break-before: always; 
+
+} 

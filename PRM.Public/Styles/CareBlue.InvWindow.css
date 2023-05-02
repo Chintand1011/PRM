@@ -1,0 +1,215 @@
+﻿/* STATEMENT SPECIFIC STYLES
+----------------------------------------------------------*/
+
+		table		{
+			border-collapse:collapse;
+			vertical-align:top;
+			/*  border:0px solid #006400;   */
+		}
+		tr			{
+			border-collapse:collapse;
+			vertical-align:top;
+			/*  border:0px solid #191970;   */
+		}
+		td			{
+			border-collapse:collapse;
+			margin:0px 0px 0px 0px;
+			padding:0px 0px 0px 0px;
+			vertical-align:top;
+			font-family:Tahoma, "Trebuchet MS", Calibri, Arial, Helvetica, sans-serif;
+			font-size:0.8em; 		
+			/*  border:0px solid #FF0000; */
+		}
+		#tbl-hdr	
+		{
+			width: 100%;
+			border-collapse:collapse;
+		}
+		#tbl-hdr td	{
+			border:1px solid #191970;
+			vertical-align:middle;
+			text-align:center;
+			padding:2px 0px 1px 0px;
+		}
+		#tbl-desc	
+		{
+			width: 100%;
+			border-collapse:collapse;
+   		}
+		#tbl-desc td	{
+            border-left: 1px solid #191970;
+            border-right: 1px solid #191970;
+			vertical-align:middle;
+			padding-bottom:1px;
+		}
+		#tbl-eob	
+		{
+			width: 100%;
+			border:1px solid #8B0000;
+			border-collapse:collapse;
+		}
+		#tbl-eob td	{
+			vertical-align:middle;
+			padding:2px 0px 2px 5px;
+		}
+		.tr-hdr     	{
+			border:1px solid #191970;
+		}		
+		.td-hdr     	{
+			padding-top:2px;
+		}		
+		.tr-ftr     	{
+			border-top:1px solid #191970;
+		}		
+		.t0     	{
+			color:#000000;
+			background-color:#ffffff;
+			vertical-align:middle;
+			text-align:center;
+			padding:3px 5px 3px 5px;
+		}		
+		.t1     	{
+			line-height: 1.4em; 
+			text-align: left; 
+			padding-left: 7px; 
+			vertical-align: top
+		}		
+		.t2     	{
+			line-height: 1.4em; 
+			text-align: left; 
+			padding-left: 5px; 
+			vertical-align: top
+		}		
+		.t3     	{
+			line-height: 1.4em; 
+			text-align: right; 
+			padding-right: 10px; 
+			vertical-align: top
+		}		
+		#tbl-cc	{
+			margin:0px 0px 0px 0px;			
+		}
+		#tbl-cc td	{
+			border:1px solid #8B0000;
+			vertical-align:top;
+			text-align:left;
+			font-family:Tahoma, "Trebuchet MS", Arial, Helvetica, sans-serif;
+			font-size:0.6em; 		
+			padding:0px 0px 0px 2px;
+		}
+		.t-alt1		{
+			color:#000000;
+			background-color:#EAF2D3;
+		}
+		.spacer1	{
+			width:0px;
+			height:15px
+		}
+		.clear		{
+			clear: both;
+		}
+
+
+/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+}
+
+a:link, a:visited
+{
+}
+
+a:hover
+{
+}
+
+a:active
+{
+}
+
+p
+{
+}
+
+p.uspsBarCode {font-family: USPSIMBCompact; font-size:14pt}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+}
+
+.header
+{
+}
+
+.header h1
+{
+}
+
+.main
+{
+}
+
+.leftCol
+{
+}
+
+.footer
+{
+}
+
+

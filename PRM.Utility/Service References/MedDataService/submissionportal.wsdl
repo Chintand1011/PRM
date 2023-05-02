@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://services.medconnect.net/submissionportal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://services.medconnect.net/submissionportal" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">External MedData submission portal services.  This webservice is only to be used only by authorized MedData clients.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://services.medconnect.net/submissionportal">
+      <s:element name="SubmitASync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestFormat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="submissionTimeout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitASyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitASyncResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SecurityHeader" type="tns:SecurityHeader" />
+      <s:complexType name="SecurityHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="SubmitASyncDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestFormat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="submissionTimeout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitASyncDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitASyncDetailResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetResponses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="responseFormat" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponsesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResponsesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponsesBySubmissionId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submissionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="responseFormat" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="overrideSent" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponsesBySubmissionIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResponsesBySubmissionIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponsesByTrackingId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="trackingId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="responseFormat" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="overrideSent" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponsesByTrackingIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResponsesByTrackingIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponsesByPayerId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="payerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="responseFormat" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="overrideSent" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponsesByPayerIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResponsesByPayerIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponsesByProviderId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="providerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="responseFormat" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="overrideSent" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResponsesByProviderIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResponsesByProviderIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitSync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestFormat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="responseFormat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="synchronousTimeout" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="submissionTimeout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitSyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitSyncResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitSyncDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestFormat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="responseFormat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="synchronousTimeout" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="submissionTimeout" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitSyncDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitSyncDetailResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SubmitASyncSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitASync" />
+  </wsdl:message>
+  <wsdl:message name="SubmitASyncSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitASyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitASyncSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="SubmitASyncDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitASyncDetail" />
+  </wsdl:message>
+  <wsdl:message name="SubmitASyncDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitASyncDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitASyncDetailSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResponses" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResponsesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesBySubmissionIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResponsesBySubmissionId" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesBySubmissionIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResponsesBySubmissionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesBySubmissionIdSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesByTrackingIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResponsesByTrackingId" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesByTrackingIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResponsesByTrackingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesByTrackingIdSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesByPayerIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResponsesByPayerId" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesByPayerIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResponsesByPayerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesByPayerIdSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesByProviderIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResponsesByProviderId" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesByProviderIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResponsesByProviderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResponsesByProviderIdSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSyncSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitSync" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSyncSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSyncSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSyncDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitSyncDetail" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSyncDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitSyncDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSyncDetailSecurityHeader">
+    <wsdl:part name="SecurityHeader" element="tns:SecurityHeader" />
+  </wsdl:message>
+  <wsdl:portType name="MedData_x0020_External_x0020_Submission_x0020_PortalSoap">
+    <wsdl:operation name="SubmitASync">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submit request(s) asynchronously receiving back the submission id.</wsdl:documentation>
+      <wsdl:input message="tns:SubmitASyncSoapIn" />
+      <wsdl:output message="tns:SubmitASyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitASyncDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submit request(s) asynchronously receiving back the response detail. Array(0) = Submission Id, Array(1) = Request Count.</wsdl:documentation>
+      <wsdl:input message="tns:SubmitASyncDetailSoapIn" />
+      <wsdl:output message="tns:SubmitASyncDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponses">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get available response(s) that have not been sent yet.</wsdl:documentation>
+      <wsdl:input message="tns:GetResponsesSoapIn" />
+      <wsdl:output message="tns:GetResponsesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesBySubmissionId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get response(s) for the submissionId.  Setting overrideSent to true will get the response(s) regardless if they have been sent before.</wsdl:documentation>
+      <wsdl:input message="tns:GetResponsesBySubmissionIdSoapIn" />
+      <wsdl:output message="tns:GetResponsesBySubmissionIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesByTrackingId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get response(s) for the trackingId.  Setting overrideSent to true will get the response(s) regardless if they have been sent before.</wsdl:documentation>
+      <wsdl:input message="tns:GetResponsesByTrackingIdSoapIn" />
+      <wsdl:output message="tns:GetResponsesByTrackingIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesByPayerId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get response(s) for the payerId.  Setting overrideSent to true will get the response(s) regardless if they have been sent before.</wsdl:documentation>
+      <wsdl:input message="tns:GetResponsesByPayerIdSoapIn" />
+      <wsdl:output message="tns:GetResponsesByPayerIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesByProviderId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get response(s) for the providerId.  Setting overrideSent to true will get the response(s) regardless if they have been sent before.</wsdl:documentation>
+      <wsdl:input message="tns:GetResponsesByProviderIdSoapIn" />
+      <wsdl:output message="tns:GetResponsesByProviderIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSync">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submit request(s) synchronously receiving back the response(s).</wsdl:documentation>
+      <wsdl:input message="tns:SubmitSyncSoapIn" />
+      <wsdl:output message="tns:SubmitSyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSyncDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Submit request(s) synchronously receiving back the response array. Array(0) = Response String, Array(1) = Request Count, Array(2) = Recursion Count, Array(3) = Submission Id.</wsdl:documentation>
+      <wsdl:input message="tns:SubmitSyncDetailSoapIn" />
+      <wsdl:output message="tns:SubmitSyncDetailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MedData_x0020_External_x0020_Submission_x0020_PortalSoap" type="tns:MedData_x0020_External_x0020_Submission_x0020_PortalSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubmitASync">
+      <soap:operation soapAction="http://services.medconnect.net/submissionportal/SubmitASync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SubmitASyncSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitASyncDetail">
+      <soap:operation soapAction="http://services.medconnect.net/submissionportal/SubmitASyncDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SubmitASyncDetailSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponses">
+      <soap:operation soapAction="http://services.medconnect.net/submissionportal/GetResponses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetResponsesSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesBySubmissionId">
+      <soap:operation soapAction="http://services.medconnect.net/submissionportal/GetResponsesBySubmissionId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetResponsesBySubmissionIdSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesByTrackingId">
+      <soap:operation soapAction="http://services.medconnect.net/submissionportal/GetResponsesByTrackingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetResponsesByTrackingIdSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesByPayerId">
+      <soap:operation soapAction="http://services.medconnect.net/submissionportal/GetResponsesByPayerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetResponsesByPayerIdSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesByProviderId">
+      <soap:operation soapAction="http://services.medconnect.net/submissionportal/GetResponsesByProviderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetResponsesByProviderIdSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSync">
+      <soap:operation soapAction="http://services.medconnect.net/submissionportal/SubmitSync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SubmitSyncSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSyncDetail">
+      <soap:operation soapAction="http://services.medconnect.net/submissionportal/SubmitSyncDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SubmitSyncDetailSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MedData_x0020_External_x0020_Submission_x0020_PortalSoap12" type="tns:MedData_x0020_External_x0020_Submission_x0020_PortalSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubmitASync">
+      <soap12:operation soapAction="http://services.medconnect.net/submissionportal/SubmitASync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SubmitASyncSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitASyncDetail">
+      <soap12:operation soapAction="http://services.medconnect.net/submissionportal/SubmitASyncDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SubmitASyncDetailSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponses">
+      <soap12:operation soapAction="http://services.medconnect.net/submissionportal/GetResponses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetResponsesSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesBySubmissionId">
+      <soap12:operation soapAction="http://services.medconnect.net/submissionportal/GetResponsesBySubmissionId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetResponsesBySubmissionIdSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesByTrackingId">
+      <soap12:operation soapAction="http://services.medconnect.net/submissionportal/GetResponsesByTrackingId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetResponsesByTrackingIdSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesByPayerId">
+      <soap12:operation soapAction="http://services.medconnect.net/submissionportal/GetResponsesByPayerId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetResponsesByPayerIdSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsesByProviderId">
+      <soap12:operation soapAction="http://services.medconnect.net/submissionportal/GetResponsesByProviderId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetResponsesByProviderIdSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSync">
+      <soap12:operation soapAction="http://services.medconnect.net/submissionportal/SubmitSync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SubmitSyncSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSyncDetail">
+      <soap12:operation soapAction="http://services.medconnect.net/submissionportal/SubmitSyncDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SubmitSyncDetailSecurityHeader" part="SecurityHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MedData_x0020_External_x0020_Submission_x0020_Portal">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">External MedData submission portal services.  This webservice is only to be used only by authorized MedData clients.</wsdl:documentation>
+    <wsdl:port name="MedData_x0020_External_x0020_Submission_x0020_PortalSoap" binding="tns:MedData_x0020_External_x0020_Submission_x0020_PortalSoap">
+      <soap:address location="https://services.meddatahealth.com/submissionportal/submissionportal.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MedData_x0020_External_x0020_Submission_x0020_PortalSoap12" binding="tns:MedData_x0020_External_x0020_Submission_x0020_PortalSoap12">
+      <soap12:address location="https://services.meddatahealth.com/submissionportal/submissionportal.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

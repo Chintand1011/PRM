@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <script src="../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <title>CareBlue Credit Application Terms and Conditions</title>
+    <link href="../Styles/Policy.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="ridge">
+        <img src="../Content/Images/Providers/logo_CareBluePA.png" alt="CareBlue PracticeAdvance" class="hdrImg"/>
+        <div class="top-bottom-borders">
+            <h2>Credit Application Terms and Conditions</h2>
+            <div class="btnImg">
+                <a href="javascript:;" onclick="closePopup()"><img src="../Content/Images/btn_close_small.gif" alt="Close" /></a> &nbsp;
+                <a href="javascript:;" onclick="printPopup()"><img src="../Content/Images/btn_print_small.gif" alt="Print" /></a>
+            </div>
+        </div>
+        <br />
+        <div>
+            <p>
+                <br />
+                Prior to submitting an application, you agree and/or confirm:
+                <br /><br />• That you are at least 18 years of age.
+                <br /><br />• To the terms of the CareBlue PracticeAdvance (“CBPA”) privacy policy (terms/privacy.htm).
+                <br /><br />• You permit CBPA to share information with your medical/dental provider(s) concerning the status of this application and account.
+                <br /><br />• You hereby authorize the provider to disclose your name, verify you are receiving treatment, whether the treatment is completed and the cost of that treatment to CBPA.
+                <br /><br />• That you are a citizen or permanent resident of the United States.
+                <br /><br />• That you have a U.S. Social Security Number.
+                <br /><br />• To allow CBPA to verify information you have entered as well as obtain your credit report(s).
+                <br /><br />• That the information you have supplied on this application is true and correct.
+                <br /><br />• Although CBPA will not be provided with information about your specific treatment(s), certain information CBPA obtains from your medical/dental provider could be considered "protected health information" under the Health Insurance Portability and Accountability Act of 1996 ("HIPAA").
+                <br /><br />• That CBPA may need to contact you regarding your application or your relationship with CBPA, its partner banks, the patient's provider, or other third parties. By submitting this application, you expressly consent to be contacted by CBPA, its agents, representatives, affiliates, or anyone calling on its behalf for those reasons at the mobile or landline telephone numbers you provide (including any landline telephone number later converted to a mobile telephone number) or by automated dialer or through the use of a prerecorded message or artificial voice. You understand your mobile telephone provider will charge me according to your plan. Finally, you agree to alert CBPA if you stop using the telephone number you provided.
+            </p>
+        </div>
+        <div class="copyrights">
+        </div>
+        <div id="btnClose" align="center" style="margin-top: 20px;">
+            <a href="#" onclick="closePopup()">
+                <img src="../Content/Images/btn_close_small.gif" alt="Close" class="btn-close" /></a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" language="javascript">
+
+    $(function () {
+        $(".copyrights").html("© " + (new Date).getFullYear() + " CareBlue PracticeAdvance, LLC. All rights reserved.");
+    });
+
+    function closePopup() {
+        window.close();
+    }
+
+    function printPopup() {
+
+        var content = $(".ridge").html();
+        var pwin = window.open('', 'print_content', "location=1,status=1,scrollbars=1, width=700,height=877");
+        pwin.document.open();
+        pwin.document.write("<html><head><link href='../Styles/Policy.css' rel='stylesheet' type='text/css' /><style type='text/css'> .btnImg{display: none;} .copyrights{border-top: 1px solid black;border-bottom: 1px solid black;padding: 5px 0 5px 0;} #btnClose{display: none;}</style></head><body onload='window.print()'><div class='ridge'>" + content + "</div></body></html>");
+        pwin.document.close();
+        setTimeout(function () {
+            closePopup();
+            pwin.close();
+        }, 1000);
+    }
+    
+</script>
+</html>

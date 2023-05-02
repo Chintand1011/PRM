@@ -1,0 +1,166 @@
+﻿@using System.Activities.Statements
+@using PatientPortal.Mobile.Models;
+@model PaymentViewModel
+
+@{
+    var paymentMethods = ViewBag.PaymentMethods as List<Dropdown>;
+    var statements = ViewBag.Statements as List<Dropdown>;
+    var isdisableButton = (paymentMethods.Count == 0 || statements.Count == 0);
+    if (isdisableButton)
+    {
+        Model.Email = string.IsNullOrEmpty(Model.Email) ? "&nbsp;" : Model.Email;
+    }
+}
+
+@section Header {
+    @Html.ActionLink("Logout", "Logout", "Account", null, new { data_icon = "arrow-l" })
+    <h1>Patient Payment Portal</h1>
+}
+
+@using (Html.BeginForm("Index", "Public", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+
+    <ul data-role="listview" data-inset="true">
+
+        @if (statements.Count > 0)
+        {
+            <li data-role="fieldcontain">
+                @Html.LabelFor(m => m.StatementID)
+                @Html.DropDownListFor(m => m.StatementID, new SelectList(statements, "Value", "Text"), new { data_native_menu = "false" })
+            </li>
+
+            <li data-role="fieldcontain">
+                <input type="button" onclick="viewStatement();" value="View Statement" />
+            </li>
+
+        }
+        else
+        {
+            <li data-role="fieldcontain">
+                @Html.LabelFor(m => m.StatementID)
+                @Html.DropDownListFor(m => m.StatementID, new SelectList(statements, "Value", "Text"), "Not Available", new { data_native_menu = "false", disabled = "disabled" })
+            </li>
+
+            <li data-role="fieldcontain">
+                <input type="button" value="View Statement" disabled="disabled" />
+            </li>
+
+        }
+
+        @if (paymentMethods.Count > 0)
+        {
+            <li data-role="fieldcontain">
+                @Html.LabelFor(m => m.PaymentCardID)
+                @Html.DropDownListFor(m => m.PaymentCardID, new SelectList(paymentMethods, "Value", "Text"), new { data_native_menu = "false" })
+            </li>
+        }
+        else
+        {
+            <li data-role="fieldcontain">
+                @Html.LabelFor(m => m.PaymentCardID)
+                @Html.DropDownListFor(m => m.PaymentCardID, new SelectList(paymentMethods, "Value", "Text"), "Not Available", new { data_native_menu = "false", disabled = "disabled" })
+            </li>
+        }
+
+        <li data-role="fieldcontain">
+            @Html.ActionLink("Register New Credit Card", "AddNewCard", "Public", null, new { style = "text-align: center;" })
+        </li>
+
+        @if (statements.Count > 0)
+        {
+            <li data-role="fieldcontain">
+                @Html.LabelFor(m => m.Amount)
+                @Html.TextBoxFor(m => m.Amount)
+            </li>
+
+        }
+        else
+        {
+            <li data-role="fieldcontain">
+                @Html.LabelFor(m => m.Amount)
+                @Html.TextBoxFor(m => m.Amount, new { disabled = "disabled", Value = "" })
+            </li>
+        }
+
+
+
+        @if (string.IsNullOrEmpty(Model.Email) && !isdisableButton)
+        {
+            <li data-role="fieldcontain">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+            </li>
+
+        }
+        else
+        {
+            <li data-role="fieldcontain">
+                @Html.LabelFor(m => m.Email, new { @class = "ui-input-text", style="float: left;" })
+                <div align="center">
+                    @Html.Raw(Model.Email)
+                </div>
+
+            </li>
+        }
+
+        @if (!isdisableButton)
+        {
+            <li data-role="fieldcontain">
+                <input type="submit" onclick="loading();" value="Make Payment" />
+            </li>
+        }
+        else
+        {
+            <li data-role="fieldcontain">
+                <input type="button" disabled="disabled" value="Make Payment" />
+            </li>
+        }
+
+
+    </ul>
+}
+
+
+
+@*<ul data-role="listview" data-inset="true">
+        <li data-role="list-divider">Navigation</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>*@
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        $(function () {
+            $("#StatementID").on("change", function () {
+                $.get("/Public/GetBalanceAccordingToStatement", { StatementID: $(this).val() }, function (balance) {
+                    $("#Amount").val(balance);
+                }, "json");
+            });
+
+        });
+
+
+        function loading() {
+
+            if ($('form').valid()) {
+
+                $.mobile.loading('show', {
+                    text: 'Processing',
+                    textVisible: true,
+                    theme: 'a',
+                    html: ""
+                });
+            }
+
+        }
+
+        function viewStatement() {
+            var statementId = $("#StatementID").val();
+            location.href = "/Public/Index?statementID=" + statementId;
+        }
+
+    </script>
+}

@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://demo.tpisoft.com/Admin/ws" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://demo.tpisoft.com/Admin/ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This Web Service provides methods that can retrieve transaction details.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://demo.tpisoft.com/Admin/ws">
+      <s:element name="GetOpenBatchSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rpNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="beginDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOpenBatchSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOpenBatchSummaryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardTrx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RPNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PNRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BeginDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludePaymentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludeTransType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludeResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NameOnCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludeCardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludeVoid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invoiceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SettleFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SettleMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SettleDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransformType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Xsl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ColDelim" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowDelim" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IncludeHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardTrxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCardTrxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardTrxSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RPNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BeginDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Register" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NameOnCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludeVoid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SettleFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SettleMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SettleDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransformType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Xsl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ColDelim" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowDelim" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IncludeHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardTrxSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCardTrxSummaryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckTrx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RPNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PNRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BeginDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludePaymentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludeTransType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Result" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludeResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NameOnCheck" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AcctNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RouteNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExcludeVoid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="invoiceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SettleFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SettleMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SettleDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransformType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Xsl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ColDelim" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RowDelim" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IncludeHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckTrxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCheckTrxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnedCheckReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BeginDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnedCheckReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReturnedCheckReportResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetOpenBatchSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetOpenBatchSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenBatchSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetOpenBatchSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCardTrx" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCardTrxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCardTrxSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCardTrxSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckTrxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCheckTrx" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckTrxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCheckTrxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnedCheckReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReturnedCheckReport" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnedCheckReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReturnedCheckReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenBatchSummaryHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="rpNum" type="s:string" />
+    <wsdl:part name="beginDt" type="s:string" />
+    <wsdl:part name="endDt" type="s:string" />
+    <wsdl:part name="extData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenBatchSummaryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxHttpGetIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RPNum" type="s:string" />
+    <wsdl:part name="PNRef" type="s:string" />
+    <wsdl:part name="BeginDt" type="s:string" />
+    <wsdl:part name="EndDt" type="s:string" />
+    <wsdl:part name="PaymentType" type="s:string" />
+    <wsdl:part name="ExcludePaymentType" type="s:string" />
+    <wsdl:part name="TransType" type="s:string" />
+    <wsdl:part name="ExcludeTransType" type="s:string" />
+    <wsdl:part name="ApprovalCode" type="s:string" />
+    <wsdl:part name="Result" type="s:string" />
+    <wsdl:part name="ExcludeResult" type="s:string" />
+    <wsdl:part name="NameOnCard" type="s:string" />
+    <wsdl:part name="CardNum" type="s:string" />
+    <wsdl:part name="CardType" type="s:string" />
+    <wsdl:part name="ExcludeCardType" type="s:string" />
+    <wsdl:part name="ExcludeVoid" type="s:string" />
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="invoiceId" type="s:string" />
+    <wsdl:part name="SettleFlag" type="s:string" />
+    <wsdl:part name="SettleMsg" type="s:string" />
+    <wsdl:part name="SettleDt" type="s:string" />
+    <wsdl:part name="TransformType" type="s:string" />
+    <wsdl:part name="Xsl" type="s:string" />
+    <wsdl:part name="ColDelim" type="s:string" />
+    <wsdl:part name="RowDelim" type="s:string" />
+    <wsdl:part name="IncludeHeader" type="s:string" />
+    <wsdl:part name="ExtData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxSummaryHttpGetIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RPNum" type="s:string" />
+    <wsdl:part name="BeginDt" type="s:string" />
+    <wsdl:part name="EndDt" type="s:string" />
+    <wsdl:part name="ApprovalCode" type="s:string" />
+    <wsdl:part name="Register" type="s:string" />
+    <wsdl:part name="NameOnCard" type="s:string" />
+    <wsdl:part name="CardNum" type="s:string" />
+    <wsdl:part name="CardType" type="s:string" />
+    <wsdl:part name="ExcludeVoid" type="s:string" />
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="SettleFlag" type="s:string" />
+    <wsdl:part name="SettleMsg" type="s:string" />
+    <wsdl:part name="SettleDt" type="s:string" />
+    <wsdl:part name="TransformType" type="s:string" />
+    <wsdl:part name="Xsl" type="s:string" />
+    <wsdl:part name="ColDelim" type="s:string" />
+    <wsdl:part name="RowDelim" type="s:string" />
+    <wsdl:part name="IncludeHeader" type="s:string" />
+    <wsdl:part name="ExtData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxSummaryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckTrxHttpGetIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RPNum" type="s:string" />
+    <wsdl:part name="PNRef" type="s:string" />
+    <wsdl:part name="BeginDt" type="s:string" />
+    <wsdl:part name="EndDt" type="s:string" />
+    <wsdl:part name="PaymentType" type="s:string" />
+    <wsdl:part name="ExcludePaymentType" type="s:string" />
+    <wsdl:part name="TransType" type="s:string" />
+    <wsdl:part name="ExcludeTransType" type="s:string" />
+    <wsdl:part name="ApprovalCode" type="s:string" />
+    <wsdl:part name="Result" type="s:string" />
+    <wsdl:part name="ExcludeResult" type="s:string" />
+    <wsdl:part name="NameOnCheck" type="s:string" />
+    <wsdl:part name="CheckNum" type="s:string" />
+    <wsdl:part name="AcctNum" type="s:string" />
+    <wsdl:part name="RouteNum" type="s:string" />
+    <wsdl:part name="ExcludeVoid" type="s:string" />
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="invoiceId" type="s:string" />
+    <wsdl:part name="SettleFlag" type="s:string" />
+    <wsdl:part name="SettleMsg" type="s:string" />
+    <wsdl:part name="SettleDt" type="s:string" />
+    <wsdl:part name="TransformType" type="s:string" />
+    <wsdl:part name="Xsl" type="s:string" />
+    <wsdl:part name="ColDelim" type="s:string" />
+    <wsdl:part name="RowDelim" type="s:string" />
+    <wsdl:part name="IncludeHeader" type="s:string" />
+    <wsdl:part name="ExtData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckTrxHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnedCheckReportHttpGetIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="MerchantKey" type="s:string" />
+    <wsdl:part name="BeginDt" type="s:string" />
+    <wsdl:part name="EndDt" type="s:string" />
+    <wsdl:part name="ExtData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnedCheckReportHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenBatchSummaryHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="rpNum" type="s:string" />
+    <wsdl:part name="beginDt" type="s:string" />
+    <wsdl:part name="endDt" type="s:string" />
+    <wsdl:part name="extData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOpenBatchSummaryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxHttpPostIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RPNum" type="s:string" />
+    <wsdl:part name="PNRef" type="s:string" />
+    <wsdl:part name="BeginDt" type="s:string" />
+    <wsdl:part name="EndDt" type="s:string" />
+    <wsdl:part name="PaymentType" type="s:string" />
+    <wsdl:part name="ExcludePaymentType" type="s:string" />
+    <wsdl:part name="TransType" type="s:string" />
+    <wsdl:part name="ExcludeTransType" type="s:string" />
+    <wsdl:part name="ApprovalCode" type="s:string" />
+    <wsdl:part name="Result" type="s:string" />
+    <wsdl:part name="ExcludeResult" type="s:string" />
+    <wsdl:part name="NameOnCard" type="s:string" />
+    <wsdl:part name="CardNum" type="s:string" />
+    <wsdl:part name="CardType" type="s:string" />
+    <wsdl:part name="ExcludeCardType" type="s:string" />
+    <wsdl:part name="ExcludeVoid" type="s:string" />
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="invoiceId" type="s:string" />
+    <wsdl:part name="SettleFlag" type="s:string" />
+    <wsdl:part name="SettleMsg" type="s:string" />
+    <wsdl:part name="SettleDt" type="s:string" />
+    <wsdl:part name="TransformType" type="s:string" />
+    <wsdl:part name="Xsl" type="s:string" />
+    <wsdl:part name="ColDelim" type="s:string" />
+    <wsdl:part name="RowDelim" type="s:string" />
+    <wsdl:part name="IncludeHeader" type="s:string" />
+    <wsdl:part name="ExtData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxSummaryHttpPostIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RPNum" type="s:string" />
+    <wsdl:part name="BeginDt" type="s:string" />
+    <wsdl:part name="EndDt" type="s:string" />
+    <wsdl:part name="ApprovalCode" type="s:string" />
+    <wsdl:part name="Register" type="s:string" />
+    <wsdl:part name="NameOnCard" type="s:string" />
+    <wsdl:part name="CardNum" type="s:string" />
+    <wsdl:part name="CardType" type="s:string" />
+    <wsdl:part name="ExcludeVoid" type="s:string" />
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="SettleFlag" type="s:string" />
+    <wsdl:part name="SettleMsg" type="s:string" />
+    <wsdl:part name="SettleDt" type="s:string" />
+    <wsdl:part name="TransformType" type="s:string" />
+    <wsdl:part name="Xsl" type="s:string" />
+    <wsdl:part name="ColDelim" type="s:string" />
+    <wsdl:part name="RowDelim" type="s:string" />
+    <wsdl:part name="IncludeHeader" type="s:string" />
+    <wsdl:part name="ExtData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardTrxSummaryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckTrxHttpPostIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RPNum" type="s:string" />
+    <wsdl:part name="PNRef" type="s:string" />
+    <wsdl:part name="BeginDt" type="s:string" />
+    <wsdl:part name="EndDt" type="s:string" />
+    <wsdl:part name="PaymentType" type="s:string" />
+    <wsdl:part name="ExcludePaymentType" type="s:string" />
+    <wsdl:part name="TransType" type="s:string" />
+    <wsdl:part name="ExcludeTransType" type="s:string" />
+    <wsdl:part name="ApprovalCode" type="s:string" />
+    <wsdl:part name="Result" type="s:string" />
+    <wsdl:part name="ExcludeResult" type="s:string" />
+    <wsdl:part name="NameOnCheck" type="s:string" />
+    <wsdl:part name="CheckNum" type="s:string" />
+    <wsdl:part name="AcctNum" type="s:string" />
+    <wsdl:part name="RouteNum" type="s:string" />
+    <wsdl:part name="ExcludeVoid" type="s:string" />
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="invoiceId" type="s:string" />
+    <wsdl:part name="SettleFlag" type="s:string" />
+    <wsdl:part name="SettleMsg" type="s:string" />
+    <wsdl:part name="SettleDt" type="s:string" />
+    <wsdl:part name="TransformType" type="s:string" />
+    <wsdl:part name="Xsl" type="s:string" />
+    <wsdl:part name="ColDelim" type="s:string" />
+    <wsdl:part name="RowDelim" type="s:string" />
+    <wsdl:part name="IncludeHeader" type="s:string" />
+    <wsdl:part name="ExtData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckTrxHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnedCheckReportHttpPostIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="MerchantKey" type="s:string" />
+    <wsdl:part name="BeginDt" type="s:string" />
+    <wsdl:part name="EndDt" type="s:string" />
+    <wsdl:part name="ExtData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnedCheckReportHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="TrxDetailSoap">
+    <wsdl:operation name="GetOpenBatchSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves Payment Type transaction summary of the current open batch for a specific merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetOpenBatchSummarySoapIn" />
+      <wsdl:output message="tns:GetOpenBatchSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves card transaction details for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PNRef&lt;/TD&gt;&lt;TD&gt;Optional query field: The unique identifier (assigned by the payment server) for a transaction. If this field is provided, at most only one transaction matching this PNRef will be returned. All other query fields will be ignored when using PNRef to query the system.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the PaymentType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'ECHECK'&lt;/LI&gt;&lt;LI&gt;'GUARANTEE'&lt;/LI&gt;&lt;LI&gt;'PAYRECEIPT'&lt;/LI&gt;&lt;LI&gt;'SETTLE'&lt;/LI&gt;&lt;LI&gt;'VERIFY'&lt;/LI&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'DEBIT','EBT'" will pull all transactions with either DEBIT and EBT payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludePaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedPaymentType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the TransType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'Authorization'&lt;/LI&gt;&lt;LI&gt;'Capture'&lt;/LI&gt;&lt;LI&gt;'Credit'&lt;/LI&gt;&lt;LI&gt;'ForceCapture'&lt;/LI&gt;&lt;LI&gt;'GetStatus'&lt;/LI&gt;&lt;LI&gt;'PostAuth'&lt;/LI&gt;&lt;LI&gt;'Purged'&lt;/LI&gt;&lt;LI&gt;'Receipt'&lt;/LI&gt;&lt;LI&gt;'RepeatSale'&lt;/LI&gt;&lt;LI&gt;'Sale'&lt;/LI&gt;&lt;LI&gt;'Void'&lt;/LI&gt;&lt;LI&gt;'Reversal'&lt;/LI&gt;&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeTransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedTransType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ApprovalCode&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Approval Code will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Result&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Result will be included. Valid values are: &lt;UL&gt;&lt;LI&gt;0 - Approved&lt;/LI&gt;&lt;LI&gt;Anything else is declined, if you want all the declined transactions, you should leave this field empty and use the ExcludeResult=0 instead.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeResult&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludedResult will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;NameOnCard&lt;/TD&gt;&lt;TD&gt;Optional query field: Card holder's name, if provided, only those transactions with card holder's name matching NameOnCard will be included. Matching is done using wild card. e.g. "test" will match "test", "1test" and "1test234".&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Card number, if provided, only those transactions with card holder's name matching CardNum will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardType&lt;/TD&gt;&lt;TD&gt;Optional query field: Card Type, if provided, only those transactions matching the CardType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'AMEX'&lt;/LI&gt;&lt;LI&gt;'CARTBLANCH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'DINERS'&lt;/LI&gt;&lt;LI&gt;'DISCOVER'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'JAL'&lt;/LI&gt;&lt;LI&gt;'JCB'&lt;/LI&gt;&lt;LI&gt;'MASTERCARD'&lt;/LI&gt;&lt;LI&gt;'VISA'&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'VISA','MASTER','DISCOVER'" will pull all transactions with either VISA, MASTER and DISCOVER payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeCardType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludeCardType will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeVoid&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether to exclude voided transaction, must either be TRUE or FALSE. Default is TRUE&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;User&lt;/TD&gt;&lt;TD&gt;Optional query field: The user who originated the transactions, if provided, only those transactions with card holder's name matching User will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;InvoiceId&lt;/TD&gt;&lt;TD&gt;Optional query field: The invoice id that was included in the original transaction. If provided, only those transactions with matching invoice Id will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleFlag&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether the transaction was settled.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleMsg&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement ID or Message returned from the host.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement timestamp.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransformType&lt;/TD&gt;&lt;TD&gt;Optional: Default is XML.&lt;UL&gt;&lt;LI&gt;XML - output the plain XML string&lt;/LI&gt;&lt;LI&gt;XSL - use XSL to transform the XML output&lt;/LI&gt;&lt;LI&gt;DELIM - use ColDelim and RowDelim to format the output&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Xsl&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "XSL". The XSL to transform the resulting dataset, if provided, the resulting dataset will be transformed using this XSL. You may pass in a URL to the XSL file, or the XSL string itself. If this field is not empty, the Web Service will try to locate the file from the URL. If that also fails, it will treat it as a XSL string. In any case, the final XSL string will be loaded and validated against the XSL schema, if it pass, then that XSL will be used for transformation.&lt;BR&gt;A sample predefined XSL is included with this Web Service: &lt;UL&gt;&lt;LI&gt;TabDelim.xsl&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ColDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string taht sepearte each column.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RowDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string that separate each row.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;IncludeHeader&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". If TRUE, then field headers will be included in the first row using the same delimiter strings.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: IMAGE_TYPE - can be NO_IMAGE, ONLY_IMAGE, ONLY_IMAGE_INCLUDE_DATA, ALL or ALL_INCLUDE_DATA.  CustomerID, Amount, RegisterNum&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCardTrxSoapIn" />
+      <wsdl:output message="tns:GetCardTrxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrxSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves card transaction summary for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ApprovalCode&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Approval Code will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;NameOnCard&lt;/TD&gt;&lt;TD&gt;Optional query field: Card holder's name, if provided, only those transactions with card holder's name matching NameOnCard will be included. Matching is done using wild card. e.g. "test" will match "test", "1test" and "1test234".&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Card number, if provided, only those transactions with card holder's name matching CardNum will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardType&lt;/TD&gt;&lt;TD&gt;Optional query field: Card Type, if provided, only those transactions matching the CardType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'AMEX'&lt;/LI&gt;&lt;LI&gt;'CARTBLANCH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'DINERS'&lt;/LI&gt;&lt;LI&gt;'DISCOVER'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'JAL'&lt;/LI&gt;&lt;LI&gt;'JCB'&lt;/LI&gt;&lt;LI&gt;'MASTERCARD'&lt;/LI&gt;&lt;LI&gt;'VISA'&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'VISA','MASTER','DISCOVER'" will pull all transactions with either VISA, MASTER and DISCOVER payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeCardType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludeCardType will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeVoid&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether to exclude voided transaction, must either be TRUE or FALSE. Default is TRUE&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;User&lt;/TD&gt;&lt;TD&gt;Optional query field: The user who originated the transactions, if provided, only those transactions with card holder's name matching User will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Register&lt;/TD&gt;&lt;TD&gt;Optional query field: The register that originated the transactions. If provided, only those transactions with matching register will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleFlag&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether the transaction was settled.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleMsg&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement ID or Message returned from the host.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement timestamp.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransformType&lt;/TD&gt;&lt;TD&gt;Optional: Default is XML.&lt;UL&gt;&lt;LI&gt;XML - output the plain XML string&lt;/LI&gt;&lt;LI&gt;XSL - use XSL to transform the XML output&lt;/LI&gt;&lt;LI&gt;DELIM - use ColDelim and RowDelim to format the output&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Xsl&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "XSL". The XSL to transform the resulting dataset, if provided, the resulting dataset will be transformed using this XSL. You may pass in a URL to the XSL file, or the XSL string itself. If this field is not empty, the Web Service will try to locate the file from the URL. If that also fails, it will treat it as a XSL string. In any case, the final XSL string will be loaded and validated against the XSL schema, if it pass, then that XSL will be used for transformation.&lt;BR&gt;A sample predefined XSL is included with this Web Service: &lt;UL&gt;&lt;LI&gt;TabDelim.xsl&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ColDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string taht sepearte each column.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RowDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string that separate each row.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;IncludeHeader&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". If TRUE, then field headers will be included in the first row using the same delimiter strings.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: IMAGE_TYPE - can be NO_IMAGE, ONLY_IMAGE, ONLY_IMAGE_INCLUDE_DATA, ALL or ALL_INCLUDE_DATA. CustomerID, Amount, RegisterNum&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCardTrxSummarySoapIn" />
+      <wsdl:output message="tns:GetCardTrxSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves check transaction details for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PNRef&lt;/TD&gt;&lt;TD&gt;Optional query field: The unique identifier (assigned by the payment server) for a transaction. If this field is provided, at most only one transaction matching this PNRef will be returned. All other query fields will be ignored when using PNRef to query the system.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the PaymentType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'ECHECK'&lt;/LI&gt;&lt;LI&gt;'GUARANTEE'&lt;/LI&gt;&lt;LI&gt;'PAYRECEIPT'&lt;/LI&gt;&lt;LI&gt;'SETTLE'&lt;/LI&gt;&lt;LI&gt;'VERIFY'&lt;/LI&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'DEBIT','EBT'" will pull all transactions with either DEBIT and EBT payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludePaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedPaymentType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the TransType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'Authorization'&lt;/LI&gt;&lt;LI&gt;'Capture'&lt;/LI&gt;&lt;LI&gt;'Credit'&lt;/LI&gt;&lt;LI&gt;'ForceCapture'&lt;/LI&gt;&lt;LI&gt;'GetStatus'&lt;/LI&gt;&lt;LI&gt;'PostAuth'&lt;/LI&gt;&lt;LI&gt;'Purged'&lt;/LI&gt;&lt;LI&gt;'Receipt'&lt;/LI&gt;&lt;LI&gt;'RepeatSale'&lt;/LI&gt;&lt;LI&gt;'Sale'&lt;/LI&gt;&lt;LI&gt;'Void'&lt;/LI&gt;&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeTransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedTransType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ApprovalCode&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Approval Code will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Result&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Result will be included. Valid values are: &lt;UL&gt;&lt;LI&gt;0 - Approved&lt;/LI&gt;&lt;LI&gt;Anything else is declined, if you want all the declined transactions, you should leave this field empty and use the ExcludeResult=0 instead.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeResult&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludedResult will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;NameOnCheck&lt;/TD&gt;&lt;TD&gt;Optional query field: Check owner's name as it is appear on the check, if provided, only those transactions with check owner's name matching NameOnCheck will be included. Matching is done using wild card. e.g. "test" will match "test", "1test" and "1test234".&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CheckNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Check number, if provided, only those transactions with matching CheckNum will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;AcctNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Check Account number, if provided, only those transactions matching the AcctNum will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RouteNum&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the RouteNum (Transit Number) will be excluded. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeVoid&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether to exclude voided transaction, must either be TRUE or FALSE. Default is TRUE&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;User&lt;/TD&gt;&lt;TD&gt;Optional query field: The user who originated the transactions, if provided, only those transactions with card holder's name matching User will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;InvoiceId&lt;/TD&gt;&lt;TD&gt;Optional query field: The invoice id that was included in the original transaction. If provided, only those transactions with matching invoice Id will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleFlag&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether the transaction was settled.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleMsg&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement ID or Message returned from the host.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement timestamp.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransformType&lt;/TD&gt;&lt;TD&gt;Optional: Default is XML.&lt;UL&gt;&lt;LI&gt;XML - output the plain XML string&lt;/LI&gt;&lt;LI&gt;XSL - use XSL to transform the XML output&lt;/LI&gt;&lt;LI&gt;DELIM - use ColDelim and RowDelim to format the output&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Xsl&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "XSL". The XSL to transform the resulting dataset, if provided, the resulting dataset will be transformed using this XSL. You may pass in a URL to the XSL file, or the XSL string itself. If this field is not empty, the Web Service will try to locate the file from the URL. If that also fails, it will treat it as a XSL string. In any case, the final XSL string will be loaded and validated against the XSL schema, if it pass, then that XSL will be used for transformation.&lt;BR&gt;A sample predefined XSL is included with this Web Service: &lt;UL&gt;&lt;LI&gt;TabDelim.xsl&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ColDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string taht sepearte each column.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RowDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string that separate each row.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;IncludeHeader&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". If TRUE, then field headers will be included in the first row using the same delimiter strings.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: IMAGE_TYPE - can be NO_IMAGE, ONLY_IMAGE, ONLY_IMAGE_INCLUDE_DATA, ALL or ALL_INCLUDE_DATA. CustomerID, Amount, RegisterNum&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCheckTrxSoapIn" />
+      <wsdl:output message="tns:GetCheckTrxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnedCheckReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves returned checks report for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;MerchantKey&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Merchant key for which to pull the report&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;BeginDt&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM.  If not provided, end date will be midnight of beginning date.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: Future Use&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetReturnedCheckReportSoapIn" />
+      <wsdl:output message="tns:GetReturnedCheckReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TrxDetailHttpGet">
+    <wsdl:operation name="GetOpenBatchSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves Payment Type transaction summary of the current open batch for a specific merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetOpenBatchSummaryHttpGetIn" />
+      <wsdl:output message="tns:GetOpenBatchSummaryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves card transaction details for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PNRef&lt;/TD&gt;&lt;TD&gt;Optional query field: The unique identifier (assigned by the payment server) for a transaction. If this field is provided, at most only one transaction matching this PNRef will be returned. All other query fields will be ignored when using PNRef to query the system.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the PaymentType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'ECHECK'&lt;/LI&gt;&lt;LI&gt;'GUARANTEE'&lt;/LI&gt;&lt;LI&gt;'PAYRECEIPT'&lt;/LI&gt;&lt;LI&gt;'SETTLE'&lt;/LI&gt;&lt;LI&gt;'VERIFY'&lt;/LI&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'DEBIT','EBT'" will pull all transactions with either DEBIT and EBT payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludePaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedPaymentType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the TransType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'Authorization'&lt;/LI&gt;&lt;LI&gt;'Capture'&lt;/LI&gt;&lt;LI&gt;'Credit'&lt;/LI&gt;&lt;LI&gt;'ForceCapture'&lt;/LI&gt;&lt;LI&gt;'GetStatus'&lt;/LI&gt;&lt;LI&gt;'PostAuth'&lt;/LI&gt;&lt;LI&gt;'Purged'&lt;/LI&gt;&lt;LI&gt;'Receipt'&lt;/LI&gt;&lt;LI&gt;'RepeatSale'&lt;/LI&gt;&lt;LI&gt;'Sale'&lt;/LI&gt;&lt;LI&gt;'Void'&lt;/LI&gt;&lt;LI&gt;'Reversal'&lt;/LI&gt;&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeTransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedTransType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ApprovalCode&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Approval Code will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Result&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Result will be included. Valid values are: &lt;UL&gt;&lt;LI&gt;0 - Approved&lt;/LI&gt;&lt;LI&gt;Anything else is declined, if you want all the declined transactions, you should leave this field empty and use the ExcludeResult=0 instead.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeResult&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludedResult will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;NameOnCard&lt;/TD&gt;&lt;TD&gt;Optional query field: Card holder's name, if provided, only those transactions with card holder's name matching NameOnCard will be included. Matching is done using wild card. e.g. "test" will match "test", "1test" and "1test234".&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Card number, if provided, only those transactions with card holder's name matching CardNum will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardType&lt;/TD&gt;&lt;TD&gt;Optional query field: Card Type, if provided, only those transactions matching the CardType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'AMEX'&lt;/LI&gt;&lt;LI&gt;'CARTBLANCH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'DINERS'&lt;/LI&gt;&lt;LI&gt;'DISCOVER'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'JAL'&lt;/LI&gt;&lt;LI&gt;'JCB'&lt;/LI&gt;&lt;LI&gt;'MASTERCARD'&lt;/LI&gt;&lt;LI&gt;'VISA'&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'VISA','MASTER','DISCOVER'" will pull all transactions with either VISA, MASTER and DISCOVER payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeCardType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludeCardType will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeVoid&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether to exclude voided transaction, must either be TRUE or FALSE. Default is TRUE&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;User&lt;/TD&gt;&lt;TD&gt;Optional query field: The user who originated the transactions, if provided, only those transactions with card holder's name matching User will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;InvoiceId&lt;/TD&gt;&lt;TD&gt;Optional query field: The invoice id that was included in the original transaction. If provided, only those transactions with matching invoice Id will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleFlag&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether the transaction was settled.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleMsg&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement ID or Message returned from the host.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement timestamp.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransformType&lt;/TD&gt;&lt;TD&gt;Optional: Default is XML.&lt;UL&gt;&lt;LI&gt;XML - output the plain XML string&lt;/LI&gt;&lt;LI&gt;XSL - use XSL to transform the XML output&lt;/LI&gt;&lt;LI&gt;DELIM - use ColDelim and RowDelim to format the output&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Xsl&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "XSL". The XSL to transform the resulting dataset, if provided, the resulting dataset will be transformed using this XSL. You may pass in a URL to the XSL file, or the XSL string itself. If this field is not empty, the Web Service will try to locate the file from the URL. If that also fails, it will treat it as a XSL string. In any case, the final XSL string will be loaded and validated against the XSL schema, if it pass, then that XSL will be used for transformation.&lt;BR&gt;A sample predefined XSL is included with this Web Service: &lt;UL&gt;&lt;LI&gt;TabDelim.xsl&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ColDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string taht sepearte each column.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RowDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string that separate each row.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;IncludeHeader&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". If TRUE, then field headers will be included in the first row using the same delimiter strings.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: IMAGE_TYPE - can be NO_IMAGE, ONLY_IMAGE, ONLY_IMAGE_INCLUDE_DATA, ALL or ALL_INCLUDE_DATA.  CustomerID, Amount, RegisterNum&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCardTrxHttpGetIn" />
+      <wsdl:output message="tns:GetCardTrxHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrxSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves card transaction summary for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ApprovalCode&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Approval Code will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;NameOnCard&lt;/TD&gt;&lt;TD&gt;Optional query field: Card holder's name, if provided, only those transactions with card holder's name matching NameOnCard will be included. Matching is done using wild card. e.g. "test" will match "test", "1test" and "1test234".&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Card number, if provided, only those transactions with card holder's name matching CardNum will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardType&lt;/TD&gt;&lt;TD&gt;Optional query field: Card Type, if provided, only those transactions matching the CardType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'AMEX'&lt;/LI&gt;&lt;LI&gt;'CARTBLANCH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'DINERS'&lt;/LI&gt;&lt;LI&gt;'DISCOVER'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'JAL'&lt;/LI&gt;&lt;LI&gt;'JCB'&lt;/LI&gt;&lt;LI&gt;'MASTERCARD'&lt;/LI&gt;&lt;LI&gt;'VISA'&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'VISA','MASTER','DISCOVER'" will pull all transactions with either VISA, MASTER and DISCOVER payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeCardType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludeCardType will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeVoid&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether to exclude voided transaction, must either be TRUE or FALSE. Default is TRUE&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;User&lt;/TD&gt;&lt;TD&gt;Optional query field: The user who originated the transactions, if provided, only those transactions with card holder's name matching User will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Register&lt;/TD&gt;&lt;TD&gt;Optional query field: The register that originated the transactions. If provided, only those transactions with matching register will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleFlag&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether the transaction was settled.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleMsg&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement ID or Message returned from the host.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement timestamp.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransformType&lt;/TD&gt;&lt;TD&gt;Optional: Default is XML.&lt;UL&gt;&lt;LI&gt;XML - output the plain XML string&lt;/LI&gt;&lt;LI&gt;XSL - use XSL to transform the XML output&lt;/LI&gt;&lt;LI&gt;DELIM - use ColDelim and RowDelim to format the output&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Xsl&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "XSL". The XSL to transform the resulting dataset, if provided, the resulting dataset will be transformed using this XSL. You may pass in a URL to the XSL file, or the XSL string itself. If this field is not empty, the Web Service will try to locate the file from the URL. If that also fails, it will treat it as a XSL string. In any case, the final XSL string will be loaded and validated against the XSL schema, if it pass, then that XSL will be used for transformation.&lt;BR&gt;A sample predefined XSL is included with this Web Service: &lt;UL&gt;&lt;LI&gt;TabDelim.xsl&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ColDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string taht sepearte each column.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RowDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string that separate each row.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;IncludeHeader&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". If TRUE, then field headers will be included in the first row using the same delimiter strings.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: IMAGE_TYPE - can be NO_IMAGE, ONLY_IMAGE, ONLY_IMAGE_INCLUDE_DATA, ALL or ALL_INCLUDE_DATA. CustomerID, Amount, RegisterNum&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCardTrxSummaryHttpGetIn" />
+      <wsdl:output message="tns:GetCardTrxSummaryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves check transaction details for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PNRef&lt;/TD&gt;&lt;TD&gt;Optional query field: The unique identifier (assigned by the payment server) for a transaction. If this field is provided, at most only one transaction matching this PNRef will be returned. All other query fields will be ignored when using PNRef to query the system.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the PaymentType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'ECHECK'&lt;/LI&gt;&lt;LI&gt;'GUARANTEE'&lt;/LI&gt;&lt;LI&gt;'PAYRECEIPT'&lt;/LI&gt;&lt;LI&gt;'SETTLE'&lt;/LI&gt;&lt;LI&gt;'VERIFY'&lt;/LI&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'DEBIT','EBT'" will pull all transactions with either DEBIT and EBT payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludePaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedPaymentType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the TransType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'Authorization'&lt;/LI&gt;&lt;LI&gt;'Capture'&lt;/LI&gt;&lt;LI&gt;'Credit'&lt;/LI&gt;&lt;LI&gt;'ForceCapture'&lt;/LI&gt;&lt;LI&gt;'GetStatus'&lt;/LI&gt;&lt;LI&gt;'PostAuth'&lt;/LI&gt;&lt;LI&gt;'Purged'&lt;/LI&gt;&lt;LI&gt;'Receipt'&lt;/LI&gt;&lt;LI&gt;'RepeatSale'&lt;/LI&gt;&lt;LI&gt;'Sale'&lt;/LI&gt;&lt;LI&gt;'Void'&lt;/LI&gt;&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeTransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedTransType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ApprovalCode&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Approval Code will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Result&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Result will be included. Valid values are: &lt;UL&gt;&lt;LI&gt;0 - Approved&lt;/LI&gt;&lt;LI&gt;Anything else is declined, if you want all the declined transactions, you should leave this field empty and use the ExcludeResult=0 instead.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeResult&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludedResult will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;NameOnCheck&lt;/TD&gt;&lt;TD&gt;Optional query field: Check owner's name as it is appear on the check, if provided, only those transactions with check owner's name matching NameOnCheck will be included. Matching is done using wild card. e.g. "test" will match "test", "1test" and "1test234".&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CheckNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Check number, if provided, only those transactions with matching CheckNum will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;AcctNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Check Account number, if provided, only those transactions matching the AcctNum will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RouteNum&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the RouteNum (Transit Number) will be excluded. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeVoid&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether to exclude voided transaction, must either be TRUE or FALSE. Default is TRUE&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;User&lt;/TD&gt;&lt;TD&gt;Optional query field: The user who originated the transactions, if provided, only those transactions with card holder's name matching User will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;InvoiceId&lt;/TD&gt;&lt;TD&gt;Optional query field: The invoice id that was included in the original transaction. If provided, only those transactions with matching invoice Id will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleFlag&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether the transaction was settled.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleMsg&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement ID or Message returned from the host.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement timestamp.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransformType&lt;/TD&gt;&lt;TD&gt;Optional: Default is XML.&lt;UL&gt;&lt;LI&gt;XML - output the plain XML string&lt;/LI&gt;&lt;LI&gt;XSL - use XSL to transform the XML output&lt;/LI&gt;&lt;LI&gt;DELIM - use ColDelim and RowDelim to format the output&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Xsl&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "XSL". The XSL to transform the resulting dataset, if provided, the resulting dataset will be transformed using this XSL. You may pass in a URL to the XSL file, or the XSL string itself. If this field is not empty, the Web Service will try to locate the file from the URL. If that also fails, it will treat it as a XSL string. In any case, the final XSL string will be loaded and validated against the XSL schema, if it pass, then that XSL will be used for transformation.&lt;BR&gt;A sample predefined XSL is included with this Web Service: &lt;UL&gt;&lt;LI&gt;TabDelim.xsl&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ColDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string taht sepearte each column.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RowDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string that separate each row.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;IncludeHeader&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". If TRUE, then field headers will be included in the first row using the same delimiter strings.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: IMAGE_TYPE - can be NO_IMAGE, ONLY_IMAGE, ONLY_IMAGE_INCLUDE_DATA, ALL or ALL_INCLUDE_DATA. CustomerID, Amount, RegisterNum&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCheckTrxHttpGetIn" />
+      <wsdl:output message="tns:GetCheckTrxHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnedCheckReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves returned checks report for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;MerchantKey&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Merchant key for which to pull the report&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;BeginDt&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM.  If not provided, end date will be midnight of beginning date.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: Future Use&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetReturnedCheckReportHttpGetIn" />
+      <wsdl:output message="tns:GetReturnedCheckReportHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TrxDetailHttpPost">
+    <wsdl:operation name="GetOpenBatchSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves Payment Type transaction summary of the current open batch for a specific merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetOpenBatchSummaryHttpPostIn" />
+      <wsdl:output message="tns:GetOpenBatchSummaryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves card transaction details for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PNRef&lt;/TD&gt;&lt;TD&gt;Optional query field: The unique identifier (assigned by the payment server) for a transaction. If this field is provided, at most only one transaction matching this PNRef will be returned. All other query fields will be ignored when using PNRef to query the system.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the PaymentType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'ECHECK'&lt;/LI&gt;&lt;LI&gt;'GUARANTEE'&lt;/LI&gt;&lt;LI&gt;'PAYRECEIPT'&lt;/LI&gt;&lt;LI&gt;'SETTLE'&lt;/LI&gt;&lt;LI&gt;'VERIFY'&lt;/LI&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'DEBIT','EBT'" will pull all transactions with either DEBIT and EBT payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludePaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedPaymentType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the TransType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'Authorization'&lt;/LI&gt;&lt;LI&gt;'Capture'&lt;/LI&gt;&lt;LI&gt;'Credit'&lt;/LI&gt;&lt;LI&gt;'ForceCapture'&lt;/LI&gt;&lt;LI&gt;'GetStatus'&lt;/LI&gt;&lt;LI&gt;'PostAuth'&lt;/LI&gt;&lt;LI&gt;'Purged'&lt;/LI&gt;&lt;LI&gt;'Receipt'&lt;/LI&gt;&lt;LI&gt;'RepeatSale'&lt;/LI&gt;&lt;LI&gt;'Sale'&lt;/LI&gt;&lt;LI&gt;'Void'&lt;/LI&gt;&lt;LI&gt;'Reversal'&lt;/LI&gt;&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeTransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedTransType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ApprovalCode&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Approval Code will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Result&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Result will be included. Valid values are: &lt;UL&gt;&lt;LI&gt;0 - Approved&lt;/LI&gt;&lt;LI&gt;Anything else is declined, if you want all the declined transactions, you should leave this field empty and use the ExcludeResult=0 instead.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeResult&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludedResult will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;NameOnCard&lt;/TD&gt;&lt;TD&gt;Optional query field: Card holder's name, if provided, only those transactions with card holder's name matching NameOnCard will be included. Matching is done using wild card. e.g. "test" will match "test", "1test" and "1test234".&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Card number, if provided, only those transactions with card holder's name matching CardNum will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardType&lt;/TD&gt;&lt;TD&gt;Optional query field: Card Type, if provided, only those transactions matching the CardType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'AMEX'&lt;/LI&gt;&lt;LI&gt;'CARTBLANCH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'DINERS'&lt;/LI&gt;&lt;LI&gt;'DISCOVER'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'JAL'&lt;/LI&gt;&lt;LI&gt;'JCB'&lt;/LI&gt;&lt;LI&gt;'MASTERCARD'&lt;/LI&gt;&lt;LI&gt;'VISA'&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'VISA','MASTER','DISCOVER'" will pull all transactions with either VISA, MASTER and DISCOVER payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeCardType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludeCardType will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeVoid&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether to exclude voided transaction, must either be TRUE or FALSE. Default is TRUE&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;User&lt;/TD&gt;&lt;TD&gt;Optional query field: The user who originated the transactions, if provided, only those transactions with card holder's name matching User will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;InvoiceId&lt;/TD&gt;&lt;TD&gt;Optional query field: The invoice id that was included in the original transaction. If provided, only those transactions with matching invoice Id will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleFlag&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether the transaction was settled.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleMsg&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement ID or Message returned from the host.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement timestamp.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransformType&lt;/TD&gt;&lt;TD&gt;Optional: Default is XML.&lt;UL&gt;&lt;LI&gt;XML - output the plain XML string&lt;/LI&gt;&lt;LI&gt;XSL - use XSL to transform the XML output&lt;/LI&gt;&lt;LI&gt;DELIM - use ColDelim and RowDelim to format the output&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Xsl&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "XSL". The XSL to transform the resulting dataset, if provided, the resulting dataset will be transformed using this XSL. You may pass in a URL to the XSL file, or the XSL string itself. If this field is not empty, the Web Service will try to locate the file from the URL. If that also fails, it will treat it as a XSL string. In any case, the final XSL string will be loaded and validated against the XSL schema, if it pass, then that XSL will be used for transformation.&lt;BR&gt;A sample predefined XSL is included with this Web Service: &lt;UL&gt;&lt;LI&gt;TabDelim.xsl&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ColDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string taht sepearte each column.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RowDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string that separate each row.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;IncludeHeader&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". If TRUE, then field headers will be included in the first row using the same delimiter strings.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: IMAGE_TYPE - can be NO_IMAGE, ONLY_IMAGE, ONLY_IMAGE_INCLUDE_DATA, ALL or ALL_INCLUDE_DATA.  CustomerID, Amount, RegisterNum&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCardTrxHttpPostIn" />
+      <wsdl:output message="tns:GetCardTrxHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrxSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves card transaction summary for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ApprovalCode&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Approval Code will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;NameOnCard&lt;/TD&gt;&lt;TD&gt;Optional query field: Card holder's name, if provided, only those transactions with card holder's name matching NameOnCard will be included. Matching is done using wild card. e.g. "test" will match "test", "1test" and "1test234".&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Card number, if provided, only those transactions with card holder's name matching CardNum will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CardType&lt;/TD&gt;&lt;TD&gt;Optional query field: Card Type, if provided, only those transactions matching the CardType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'AMEX'&lt;/LI&gt;&lt;LI&gt;'CARTBLANCH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'DINERS'&lt;/LI&gt;&lt;LI&gt;'DISCOVER'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'JAL'&lt;/LI&gt;&lt;LI&gt;'JCB'&lt;/LI&gt;&lt;LI&gt;'MASTERCARD'&lt;/LI&gt;&lt;LI&gt;'VISA'&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'VISA','MASTER','DISCOVER'" will pull all transactions with either VISA, MASTER and DISCOVER payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeCardType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludeCardType will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeVoid&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether to exclude voided transaction, must either be TRUE or FALSE. Default is TRUE&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;User&lt;/TD&gt;&lt;TD&gt;Optional query field: The user who originated the transactions, if provided, only those transactions with card holder's name matching User will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Register&lt;/TD&gt;&lt;TD&gt;Optional query field: The register that originated the transactions. If provided, only those transactions with matching register will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleFlag&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether the transaction was settled.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleMsg&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement ID or Message returned from the host.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement timestamp.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransformType&lt;/TD&gt;&lt;TD&gt;Optional: Default is XML.&lt;UL&gt;&lt;LI&gt;XML - output the plain XML string&lt;/LI&gt;&lt;LI&gt;XSL - use XSL to transform the XML output&lt;/LI&gt;&lt;LI&gt;DELIM - use ColDelim and RowDelim to format the output&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Xsl&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "XSL". The XSL to transform the resulting dataset, if provided, the resulting dataset will be transformed using this XSL. You may pass in a URL to the XSL file, or the XSL string itself. If this field is not empty, the Web Service will try to locate the file from the URL. If that also fails, it will treat it as a XSL string. In any case, the final XSL string will be loaded and validated against the XSL schema, if it pass, then that XSL will be used for transformation.&lt;BR&gt;A sample predefined XSL is included with this Web Service: &lt;UL&gt;&lt;LI&gt;TabDelim.xsl&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ColDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string taht sepearte each column.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RowDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string that separate each row.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;IncludeHeader&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". If TRUE, then field headers will be included in the first row using the same delimiter strings.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: IMAGE_TYPE - can be NO_IMAGE, ONLY_IMAGE, ONLY_IMAGE_INCLUDE_DATA, ALL or ALL_INCLUDE_DATA. CustomerID, Amount, RegisterNum&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCardTrxSummaryHttpPostIn" />
+      <wsdl:output message="tns:GetCardTrxSummaryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves check transaction details for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;RPNum&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The merchant's RP Number, the query will be run against this merchant's account.&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PNRef&lt;/TD&gt;&lt;TD&gt;Optional query field: The unique identifier (assigned by the payment server) for a transaction. If this field is provided, at most only one transaction matching this PNRef will be returned. All other query fields will be ignored when using PNRef to query the system.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;BeginDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;PaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the PaymentType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'ACH'&lt;/LI&gt;&lt;LI&gt;'DEBIT'&lt;/LI&gt;&lt;LI&gt;'EBT'&lt;/LI&gt;&lt;LI&gt;'ECHECK'&lt;/LI&gt;&lt;LI&gt;'GUARANTEE'&lt;/LI&gt;&lt;LI&gt;'PAYRECEIPT'&lt;/LI&gt;&lt;LI&gt;'SETTLE'&lt;/LI&gt;&lt;LI&gt;'VERIFY'&lt;/LI&gt;&lt;BR&gt;Or any permutation of the above values, e.g. "'DEBIT','EBT'" will pull all transactions with either DEBIT and EBT payment type.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludePaymentType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedPaymentType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the TransType will be included.&lt;BR&gt;Valid values are &lt;UL&gt;&lt;LI&gt;'Authorization'&lt;/LI&gt;&lt;LI&gt;'Capture'&lt;/LI&gt;&lt;LI&gt;'Credit'&lt;/LI&gt;&lt;LI&gt;'ForceCapture'&lt;/LI&gt;&lt;LI&gt;'GetStatus'&lt;/LI&gt;&lt;LI&gt;'PostAuth'&lt;/LI&gt;&lt;LI&gt;'Purged'&lt;/LI&gt;&lt;LI&gt;'Receipt'&lt;/LI&gt;&lt;LI&gt;'RepeatSale'&lt;/LI&gt;&lt;LI&gt;'Sale'&lt;/LI&gt;&lt;LI&gt;'Void'&lt;/LI&gt;&lt;/UL&gt;&lt;BR&gt;Or any permutation of the above values.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeTransType&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transaction matching the ExcludedTransType will be exlucded.&lt;BR&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ApprovalCode&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Approval Code will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Result&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, only those transactions matching the Result will be included. Valid values are: &lt;UL&gt;&lt;LI&gt;0 - Approved&lt;/LI&gt;&lt;LI&gt;Anything else is declined, if you want all the declined transactions, you should leave this field empty and use the ExcludeResult=0 instead.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeResult&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the ExcludedResult will be excluded.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;NameOnCheck&lt;/TD&gt;&lt;TD&gt;Optional query field: Check owner's name as it is appear on the check, if provided, only those transactions with check owner's name matching NameOnCheck will be included. Matching is done using wild card. e.g. "test" will match "test", "1test" and "1test234".&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;CheckNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Check number, if provided, only those transactions with matching CheckNum will be included.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;AcctNum&lt;/TD&gt;&lt;TD&gt;Optional query field: Check Account number, if provided, only those transactions matching the AcctNum will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RouteNum&lt;/TD&gt;&lt;TD&gt;Optional query field: If provided, any transactions matching the RouteNum (Transit Number) will be excluded. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExcludeVoid&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether to exclude voided transaction, must either be TRUE or FALSE. Default is TRUE&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;User&lt;/TD&gt;&lt;TD&gt;Optional query field: The user who originated the transactions, if provided, only those transactions with card holder's name matching User will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;InvoiceId&lt;/TD&gt;&lt;TD&gt;Optional query field: The invoice id that was included in the original transaction. If provided, only those transactions with matching invoice Id will be included. Matching is done using wild card.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleFlag&lt;/TD&gt;&lt;TD&gt;Optional query field: Whether the transaction was settled.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleMsg&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement ID or Message returned from the host.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;SettleDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The settlement timestamp.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;TransformType&lt;/TD&gt;&lt;TD&gt;Optional: Default is XML.&lt;UL&gt;&lt;LI&gt;XML - output the plain XML string&lt;/LI&gt;&lt;LI&gt;XSL - use XSL to transform the XML output&lt;/LI&gt;&lt;LI&gt;DELIM - use ColDelim and RowDelim to format the output&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;Xsl&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "XSL". The XSL to transform the resulting dataset, if provided, the resulting dataset will be transformed using this XSL. You may pass in a URL to the XSL file, or the XSL string itself. If this field is not empty, the Web Service will try to locate the file from the URL. If that also fails, it will treat it as a XSL string. In any case, the final XSL string will be loaded and validated against the XSL schema, if it pass, then that XSL will be used for transformation.&lt;BR&gt;A sample predefined XSL is included with this Web Service: &lt;UL&gt;&lt;LI&gt;TabDelim.xsl&lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ColDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string taht sepearte each column.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;RowDelim&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". This defines the string that separate each row.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;IncludeHeader&lt;/TD&gt;&lt;TD&gt;Optional: This field is used only if the TransformType is "DELIM". If TRUE, then field headers will be included in the first row using the same delimiter strings.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: IMAGE_TYPE - can be NO_IMAGE, ONLY_IMAGE, ONLY_IMAGE_INCLUDE_DATA, ALL or ALL_INCLUDE_DATA. CustomerID, Amount, RegisterNum&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetCheckTrxHttpPostIn" />
+      <wsdl:output message="tns:GetCheckTrxHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnedCheckReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves returned checks report for a merchant.&lt;BR&gt;Required parameters are in &lt;B&gt;bold&lt;/B&gt;.&lt;TABLE cellspacing=1 cellpadding=4 frame='box' border=1 bordercolor='#dcdcdc'&gt;&lt;tr&gt;&lt;td class='frmHeader' background='#dcdcdc' style='border-right: 2px solid white;'&gt;Parameter&lt;/td&gt;&lt;td class='frmHeader' background='#dcdcdc'&gt;Value&lt;/td&gt;&lt;/tr&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;UserName&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: User Name&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;Password&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Password&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;MerchantKey&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required: Merchant key for which to pull the report&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;&lt;B&gt;BeginDt&lt;/B&gt;&lt;/TD&gt;&lt;TD&gt;&lt;B&gt;Required query field: The begin date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT00:00:00:0000AM&lt;/B&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;EndDt&lt;/TD&gt;&lt;TD&gt;Optional query field: The end date of the date range in MM/DD/YYYY format. This date will be converted to MM/DD/YYYYT12:59:59:9999PM.  If not provided, end date will be midnight of beginning date.&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD&gt;ExtData&lt;/TD&gt;&lt;TD&gt;Optional: Extended Data in XML, Valid Values are: Future Use&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;</wsdl:documentation>
+      <wsdl:input message="tns:GetReturnedCheckReportHttpPostIn" />
+      <wsdl:output message="tns:GetReturnedCheckReportHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TrxDetailSoap" type="tns:TrxDetailSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOpenBatchSummary">
+      <soap:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetOpenBatchSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrx">
+      <soap:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetCardTrx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrxSummary">
+      <soap:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetCardTrxSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckTrx">
+      <soap:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetCheckTrx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnedCheckReport">
+      <soap:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetReturnedCheckReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TrxDetailSoap12" type="tns:TrxDetailSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetOpenBatchSummary">
+      <soap12:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetOpenBatchSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrx">
+      <soap12:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetCardTrx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrxSummary">
+      <soap12:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetCardTrxSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckTrx">
+      <soap12:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetCheckTrx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnedCheckReport">
+      <soap12:operation soapAction="http://demo.tpisoft.com/Admin/ws/GetReturnedCheckReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TrxDetailHttpGet" type="tns:TrxDetailHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetOpenBatchSummary">
+      <http:operation location="/GetOpenBatchSummary" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrx">
+      <http:operation location="/GetCardTrx" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrxSummary">
+      <http:operation location="/GetCardTrxSummary" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckTrx">
+      <http:operation location="/GetCheckTrx" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnedCheckReport">
+      <http:operation location="/GetReturnedCheckReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TrxDetailHttpPost" type="tns:TrxDetailHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetOpenBatchSummary">
+      <http:operation location="/GetOpenBatchSummary" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrx">
+      <http:operation location="/GetCardTrx" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardTrxSummary">
+      <http:operation location="/GetCardTrxSummary" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckTrx">
+      <http:operation location="/GetCheckTrx" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnedCheckReport">
+      <http:operation location="/GetReturnedCheckReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TrxDetail">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This Web Service provides methods that can retrieve transaction details.</wsdl:documentation>
+    <wsdl:port name="TrxDetailSoap" binding="tns:TrxDetailSoap">
+      <soap:address location="https://secure.ftipgw.com/admin/ws/trxdetail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TrxDetailSoap12" binding="tns:TrxDetailSoap12">
+      <soap12:address location="https://secure.ftipgw.com/admin/ws/trxdetail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TrxDetailHttpGet" binding="tns:TrxDetailHttpGet">
+      <http:address location="https://secure.ftipgw.com/admin/ws/trxdetail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TrxDetailHttpPost" binding="tns:TrxDetailHttpPost">
+      <http:address location="https://secure.ftipgw.com/admin/ws/trxdetail.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

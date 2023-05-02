@@ -1,0 +1,1031 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    font-size: 0.8em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+.a
+{
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+    text-decoration: none;
+    outline: none;
+}
+
+a, img
+{
+    border: none;
+    outline: none;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6, h1p, h2p, h3p, h4p
+{
+    font-size: 1.0em; /*color: #ed7d23; / #666666; */
+    color: #002897;
+    text-transform: none;
+    font-weight: 200;
+}
+
+h1 /* Header Title, Only use for header text */
+{
+    font-size: 2.0em;
+    color: #ee8722;
+    font-weight: 600;
+    padding: 0px 0px 0px 0px;
+    margin: 1px 0px 0px 20px;
+}
+h2 /* Section Title, Only use for below header */
+{
+    font-size: 1.25em;
+    line-height: 1.5em;
+    color: #002897;
+    font-weight: 600;
+    padding: 0px 0px 20px 10px;
+    margin-bottom: 0px;
+}
+h3 /* Message Box Title */
+{
+    font-size: 1.3em; /*color: #ed7d23; / #666666; */
+    line-height: 1.5em;
+    color: #e97824;
+    font-weight: 400;
+    padding: 0px 0px 0px 10px;
+    margin-top: -10px;
+}
+h4 /* Main Body Text */
+{
+    font-size: 1.3em;
+    line-height: 1.4em;
+    color: #002897;
+    font-weight: 400;
+    padding: 0px 0px 0px 10px;
+    margin-top: -10px;
+}
+h5 /* Message Box Text */
+{
+    font-size: 1.2em;
+    line-height: 1.3em;
+    color: #002897;
+    font-weight: 400;
+    padding: 0px 0px 0px 10px;
+    margin-top: -10px;
+}
+h6
+{
+    font-size: 1.1em;
+    line-height: 1.2em;
+    color: black;
+    font-weight: 400;
+    padding: 0px 0px 0px 10px;
+    margin-top: -10px;
+}
+
+h1p /* Header Title Popups */
+{
+    font-size: 1.6em;
+    color: #002897;
+    font-weight: 600;
+}
+h2p /* Section Title */
+{
+    font-size: 1.4em;
+    color: #e97824;
+    font-weight: 600;
+    line-height:1.3em;
+}
+h3p /* Section Title */
+{
+    font-size: 1.3em;
+    color: #002897;
+    font-weight: 300;
+}
+h4p /* Section Title */
+{
+    font-size: 1.1em;
+    color: #002897;
+    font-weight: 400;
+}
+h5p /* Section Title */
+{
+    font-size: 1.0em;
+    color: #002897;
+    font-weight: 500;
+}
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+
+DIV.response
+{
+	/** font-family: Arial,Helvetica,Sans-Serif; **/
+	width: 100%;	
+	margin: 5px 5px 5px 5px;
+}
+
+H1.response
+{
+	padding: 10px;
+	border: 1px solid #000000;
+	background-color: #2B5276;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	color: #FFFFFF;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/** font-size: 10pt; **/
+}
+
+/* Section Formatting */
+DIV.section
+{
+	width: 725px; 
+	border: 0px solid #000000;
+	margin-bottom: 10px;
+}
+
+H1.section
+{	
+	padding: 3px;
+	margin: 0px;
+	/** font-family: Trebuchet MS; 
+	font-size: 10pt; **/
+	font-weight: bold;
+	color: rgb(148,134,122);
+	border-bottom-style: solid;	
+	border-color: #CCCCCC;
+	border-width: 1px;
+	width: 725px;
+	text-transform: uppercase;
+}
+
+/* Payer, Provider, Subscriber, Dependent Tables */
+.PayerTable, .ProviderTable, .SubscriberTable, .DependentTable
+{
+	width: 400px;
+	border-collapse: collapse;
+	/** font-size: 11px; **/
+}
+
+.SigBlock
+{
+	font-size: 12px; 
+}
+
+/* Field and Value Formatting */
+.PayerTable .fld, .ProviderTable .fld, .SubscriberTable .fld, .DependentTable .fld, .statusTable .fld
+{
+	width: 200px;
+	vertical-align: top;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/** font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px; **/
+	border-bottom-style: solid;
+	border-color: #CCCCCC;
+	border-bottom-width: 1px;	
+}
+
+.PayerTable .val, .ProviderTable .val, .SubscriberTable .val, .DependentTable .val, .statusTable .val
+{
+	color: rgb(77,145,122);
+	width: 200px;
+	vertical-align: top;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/** font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 0;
+	font-size: 11px; **/
+	border-bottom-style: solid;
+	border-color: #CCCCCC;
+	border-bottom-width: 1px;	
+
+}
+
+.oddRow
+{
+	/*background-color: #F7F7F7;*/
+	border-collapse: collapse;
+}
+
+.evenRow
+{
+}
+
+/* Contact and Address Tables */
+TABLE.contactAddressTable
+{
+	margin: 5px;
+	border: 2px solid rgb(77,145,122);
+	width: 285px;
+	color: rgb(77,145,122);
+	/** font-size: 12px;
+	font-family: Arial; **/
+}
+
+TABLE.contactAddressTable th
+{
+	background-color: rgb(77,145,122);
+	vertical-align: middle;
+	text-align: center;
+	color: #FFFFFF;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+TABLE.contactAddressTable .fld
+{
+	background-color: #F5F5F5;
+	padding-right: 15px;
+	border-bottom-style: 2px solid #CCCCCC;
+}
+
+/* Eligibility Status Formatting */
+EM.active
+{
+	font-weight: bold;
+	font-style: italic;
+	color: rgb(77,145,122);
+}
+EM.inactive
+{
+	font-weight: bold;
+	font-style: italic;
+	color: #FF0000;
+}
+EM.aaa
+{
+	font-weight: bold;
+	font-style: italic;
+	color: #FF0000;
+}
+
+.status TH
+{
+	border-color: #CCCCCC;
+	border-width: 0px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	border-bottom-style: solid;
+	color: rgb(148,134,122);
+}
+
+.statusTable
+{
+	border-collapse: collapse;	
+	font-size: 11px;
+	width : 725px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+/* Eligibility / Benefit Information Formatting */
+
+.showHideAll
+{
+	font-size: 12px;
+}
+
+LABEL.links
+{
+	display: inline-block;
+	width: 250px;
+	font-size: 9.0pt;
+	font-family: Arial;
+}
+
+.group1
+{
+	
+	border: 0px;
+}
+
+H1.group1
+{
+	margin: 0px;
+	padding: 0px;
+	color: Black;
+	text-align: left;
+	font-weight: bold;	
+	font-size: 9.0pt;
+	font-family: Arial,Helvetica,sans-serif;
+}
+H1.group2
+{
+	margin: 2px;
+	padding: 0px;
+	vertical-align: middle;
+	text-align: left;
+	font-weight: bold;
+	color: #000000;
+	font-size: 9.0pt;
+	font-family: Arial;
+}
+
+.group4
+{
+	border: 0px;
+	margin: 0px;
+	color: rgb(148,134,122);
+}
+
+H1.group4
+{
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 8pt;
+		
+}
+
+.group3
+{
+   	margin: 0px;
+}
+
+H1.group3
+{
+	margin: 0px;
+	font-size: 8pt;
+	font-weight: bold;
+	color: rgb(77,145,122); 
+	border-bottom-style: solid;
+	border-color: #CCCCCC;
+	border-bottom-width: 1px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+.benefit_container
+{
+	margin-bottom: 7px;
+	margin-top: 7px;
+	margin-right: 5px;
+}
+
+.benefitTable .fld,.standard_benefit .fld
+{
+	padding-right: 25px;
+	width: 200px;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-style: solid;
+	border-color: #CCCCCC;
+	border-bottom-width: 1px;
+	font-size: 11px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+.benefitTable .val, .standard_benefit .val, .contactAddressTable .val
+{
+	padding-right: 25px;
+	width: 200px;
+	color: rgb(77,145,122); 
+	text-align: left;
+	vertical-align: top;
+	border-bottom-style: solid;
+	border-color: #CCCCCC;
+	border-bottom-width: 1px;
+	font-size: 11px;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+.ResponseHeader
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 5px;
+	border: 1px solid #000000;
+	background-color: #2B5276;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 12pt;
+}
+
+.backtotop
+{
+	text-align: right;
+	margin-right: 10px;
+	margin-bottom: 15px;
+	font-size: 11px;
+}
+
+.oddRow td{
+	border-bottom-style: solid;
+	
+	border-color: #CCCCCC;
+	border-bottom-width: 1px;
+}
+/*The below image is the symbol used in the Insurance Verification, Eligibility Status Section to display the Show All button*/
+.checkAll{
+	width: 100px;
+	height: 20px;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	background-color: rgb(77,145,122);
+	color: #FFFFFF;	
+	font-weight: bold;
+	background-image: url("../images/go_button_symbol.gif");
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 0px 20px 2px 5px;
+	text-align:left;
+}
+/*The below image is the symbol used in the Insurance Verification, Eligibility Status Section to display the Hide All button*/
+.uncheckAll{
+	width: 100px;
+	height: 20px;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	background-color: #998B7D;
+	background-image: url("../images/close.gif");
+	background-position: right;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	text-align:left;
+}
+
+
+
+
+/* PFS HTML related CSS changes below*/
+
+td.prodNameDetails{	
+	border-right: 2px solid rgb(148,134,122);	
+	width: 250px ;		
+	}
+.pfsHtml{
+	width: 725 px;
+	}
+
+hr.defaultHr{	
+	align :left;
+	width : 740 px;	
+	}
+hr.errorHr{	
+	align :left;
+	width : 510 px;	
+	}
+.rightTopMenuTable{
+	border:0px;
+	width: 345 px;	
+	}
+td.rightTopTitle{
+	width: 157px;
+	}
+td.rightTopValue{
+	 width: 188px;
+	}
+div.pfsHtml {
+	border: 2px;
+	width: 725 px; 	
+	}
+/* The partners can customize their own images. The below image is the logo of the particular partner*/
+.partnerLogoDiv{
+	background : transparent url("../images/PC_Partnerlogo_c.gif") no-repeat bottom center ; 
+	width: 145 px;
+	}
+/* The partners can customize their own products. The below image is the product name of the particular partner*/
+td.productName{	
+	background : url("../images/pfsResponseTitle.gif") no-repeat bottom left;
+	width: 235px;
+	}
+td.subscriberHeader{
+	border-left: 1px solid rgb(148,134,122);
+	width: 345px;
+	}
+span.subscriberHeaderTitle{
+	color: black;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;	
+	}
+td.inputparameterTitle{
+	width: 157px;
+	}
+td.inputparameterValue{
+	width: 188px;
+	}
+DIV.pfsHtml DIV.transUnionReportSection DIV.sectionTitle{
+	color: #4D917A;
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+	width: 725px;	
+}
+
+DIV.pfsHtml div.inputparameterSection span.inputparameterSectionTitle{
+	color: rgb(77,145,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 13px;	
+}
+td.green {
+	width: 500px;	
+}
+hr.green {
+	color: #4D917A;
+	width: 500px;	
+}
+
+.productNameDiv{
+	color: rgb(228,86,1);
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 11px;	
+}
+td.messageSubSection{
+	width: 96px;
+	}
+span.messageSubSection{
+	color: Black;
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	width: 96px;		
+}
+td.messageStatusIcon{
+	width: 30px;
+	}
+span.messageStatusIcon{
+	width: 18px;	
+	float: left;
+	display: block;
+	}
+td.statusMessage{
+	width: 252px;
+	}
+span.statusMessage{
+	color: rgb(77,145,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+	}
+	
+span.statusMessageIA{
+	color: rgb(77,145,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+	width: 525px;
+	}
+	
+span.statusMessageRedIA{
+	color: rgb(255,0,0);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+	width: 525px;
+	}
+span.statusMessageWarningIA{
+	color: rgb(228,86,1);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+	width: 525px;
+	}
+span.topRightTitle
+	{
+	color: rgb(148,134,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;	
+}
+
+span.inputOutputResultHeaderTitleSection
+	{
+	color: rgb(148,134,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	margin-bottom: 8px;	
+}
+
+.inputOutputResultHeaderSubSectionTitle{
+	color: rgb(148,134,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;	
+	width: 96px;
+	margin-bottom: 8px;
+}
+
+span.inputSubjectDataSection{
+	color: Black;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;	
+	width: 200px;
+}
+span.returnedSubjectDataSection{
+	color: Black;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;	
+}
+span.resultDataSection{
+	color: Black;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;	
+}
+.likelyhoodCollectionTable{
+	width: 100%;
+	text-align: center;
+}
+.probabilityFinanceAidTable{
+	width: 100%;
+	text-align: center;
+}
+
+table.identificationAcuracySectionTable{
+	width: 100%;
+	text-align: center;
+}
+
+DIV.pfsHtml DIV.likelyhoodCollectionSection DIV.sectionTitle span.sectionTitle{
+	color: rgb(41,93,80);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;		
+	width: 220px;	
+	
+}
+DIV.pfsHtml DIV.identificationAcuracySection DIV.sectionTitle span.sectionTitle{
+	color: rgb(41,93,80);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;		
+	width:220px;
+	text-align: center;
+
+}
+
+DIV.pfsHtml DIV.probabilityFinanceAidSection DIV.sectionTitle span.sectionTitle{
+	color: rgb(41,93,80);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;	
+	width: 220px;
+}
+DIV.pfsHtml DIV.transUnionReportSection DIV.sectionTitle span.sectionTitle{
+	color: rgb(77,145,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	width: 220px;
+}
+span.typeSubSection
+	{
+	
+	color: rgb(148,134,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	width: 182px;
+	margin-bottom: 8px;
+}
+
+td.typeSubSection {
+	width: 182px;
+}
+
+td.valueSection {
+	width: 200px;
+}
+
+span.valueSection
+	{
+	color: rgb(148,134,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	width: 200px;
+	margin-bottom: 8px;
+}
+span.typeColumnValueSection
+	{
+	color: #493829;
+	font-size: 9px;
+	font-family: Trebuchet MS;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: normal;
+}
+
+span.valueColumnValueSection
+	{
+	display: block;
+	color: #467565;
+	float: left;
+	margin: 0px;
+	padding: 5px 7px 5px 0px;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;	
+	width: 65px;
+}		
+div.inputOutputResultSection{
+	/** width: 725px; **/ 
+	}	
+	
+span.expandLink{
+	font-size: 10pt;
+	margin-left: 10px;
+}
+td.printImage{
+	width: 725px;
+}
+div.footer div.sectionTitle span.sectionTitle{
+	color: rgb(77,145,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;	
+}
+.identificationTable{
+	border-spacing: 0px;
+	border-collapse: collapse;
+	width: 725px;	
+}
+.likelyhoodTable, .financialTable{
+ 	border-spacing: 0px;
+	border-collapse: collapse;
+	width: 362px;	
+}
+td.statusMessageRed{
+	width: 252px;
+	}
+span.statusMessageRed{
+	color: rgb(255,0,0);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+	}
+td.statusMessageWarning{
+	width: 252px;
+	}
+span.statusMessageWarning{
+	color: rgb(228,86,1);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+	}
+span.statusMessageNone{
+	color: rgb(0,0,0);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+	}	
+span.Match{
+	color: #467565;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;	
+	font-weight: bold;
+}
+span.NoMatch{
+	color: #CC0000;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;	
+	font-weight: bold;
+}
+DIV.pfsHtml DIV.eligibilitySection DIV.sectionTitle span.sectionTitle{
+	color: rgb(41,93,80);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;	
+	width: 280px;
+}
+
+td.inputOutputResultSection{
+	border-bottom-style: solid;
+	border-color: #CCCCCC;
+	border-bottom-width: 1px;
+	width: 200px;	
+}
+div.printImageText{	
+	color: #333333;
+	margin-left: 60px;
+	margin-right: 60px;
+	font-family: Courier,Arial;
+	font-size: 1.0em;	
+	line-height: 1.0em;
+	text-align: left;	
+}
+div.errorArea {
+	border: 2px solid #CC0000;
+	width: 596px;
+	background-color: #F9E8E6;
+	background-color: #F8F5F1;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+div.contentPageMessageArea {	
+	margin-bottom: 0px;
+}
+div.errorArea div.details {
+	display: block;
+	width: 596px;
+}
+/*The below image is the error icon image. It is displayed along with the error message if any error in the transaction occurs*/
+div.errorArea div.details h4 {
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+	padding: 9px 5px 5px 38px;		
+	color: #BB0000;
+	background-image: url("../images/msg_icon_large_error.gif");
+}
+div.errorArea div.details p
+{	
+	margin-left: 40px;
+	font-family: Meta LFB Medium, Arial;
+	font-weight: bold;
+	font-size: 12px;
+}
+.pfsHtmlMainDivTable{
+	width: 725px;
+}
+.messageSectionTable{
+	width: 362px;	
+	background-color: #FBF8EE;			
+}
+/*The below image is the callout bullet image. It is used before the link to display the credit report of the person*/
+.callout_bullet{
+	background: transparent url("../images/callout_bullet.gif") no-repeat left;	
+}
+/*td.sectionTitle {
+   width: 220px;
+}*/
+div.horizontalSepeartionLine {
+	width:740px;
+}
+td.headingSection {
+    width: 125px;
+}
+td.grey {
+	border-bottom-style: solid;
+	border-color: #CCCCCC;
+	border-bottom-width: 1px;
+	width: 100%;
+}
+
+td.inputOutputAddressResultSection{
+	border-bottom-style: solid;
+	border-color: #CCCCCC;
+	border-bottom-width: 0px;
+	width: 200px;	
+}
+.inputOutputResultAddHeaderSubSectionTitle{
+	color: rgb(148,134,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;	
+	width: 70px;
+	margin-bottom: 8px;
+}
+span.returnedWarnSubjectDataSection{
+	color: rgb(228,86,1);
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;
+	font-weight: bold;	
+}
+span.statusTransactionMessage{
+	color: rgb(77,145,122);
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12px;	
+}
+td.inputOutputResultSectionnew{
+	border-bottom-style: solid;
+	border-color: #CCCCCC;
+	border-bottom-width: 1px;
+	width: 25%;	
+}
+td.statusTransactionMessage{
+	width: 140px;
+}
+span.inputPhoneDataSection{
+	color: Black;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 11px;	
+	width: 100px;
+}
+	
+
+td.identificationSection{
+	width: 750px;
+	background-color: rgb(247,237,212);
+	border-style: solid;
+	border-color: rgb(73, 56, 41);
+	border-width: 1px;
+	text-align: center;
+}	
+table.pfsHtmlTable{
+	border: 1px solid; 
+	border-color: rgb(73, 56, 41);
+}
+td.likelyhoodSection{
+	width: 375px;
+	background-color: rgb(247,237,212);
+	border: solid;
+	border-color: rgb(73, 56, 41);
+	border-width: 1px;
+	text-align: center;
+}
+td.financialSection{
+	width: 375px;
+	background-color: rgb(247,237,212);
+	border-style: solid;
+	border-color: rgb(73, 56, 41);
+	border-width: 1px;
+	text-align: center;
+}
+
+td.likelyhoodBodySection{
+	width: 375px;
+	vertical-align: top;
+	border: solid;
+	border-color: rgb(73, 56, 41);
+	border-width: 1px;
+	/*text-align: center;*/
+}
+td.financialBodySection{
+	width: 375px;
+	vertical-align: top;
+	border-style: solid;
+	border-color: rgb(73, 56, 41);
+	border-width: 1px;
+	/*text-align: center;*/
+}
+td.identificationBodySection{
+	width: 750px;
+	vertical-align: top;
+	border-style: solid;
+	border-color: rgb(73, 56, 41);
+	border-width: 1px;
+	/*text-align: center;*/
+}
+
+td.eligibilitySection{
+    width: 750px;
+	background-color: rgb(247,237,212);
+	border-style: solid;
+	border-color: rgb(73, 56, 41);
+	border-width: 1px;
+	text-align: center;
+}
+
+td.eligibilityBodySection{
+	width: 750px;
+	vertical-align: top;
+	border-style: solid;
+	border-color: rgb(73, 56, 41);
+	border-width: 1px;
+	text-align: center;
+}
+
+td.errorSection{
+	width: 750px;
+	vertical-align: top;
+	border-style: solid;
+	border-color: rgb(73, 56, 41);
+	border-width: 1px;
+	text-align: center;
+}

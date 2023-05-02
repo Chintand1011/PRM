@@ -1,0 +1,12 @@
+﻿@using PatientPortal.Mobile
+
+<div class="ui-grid-solo">
+    <div class="ui-block-a" align="center">
+        &copy; 2010 - @DateTime.Now.Year IT Mobility, Inc
+        <br />
+        Policies [ <a href="/patient/m/terms/privacy.htm" target="_blank">Privacy</a> | <a href="/patient/m/terms/legal.htm" target="_blank">Legal</a> | <a href="/patient/m/terms/billing.htm" target="_blank">Billing</a> ]
+        <br />
+        <a href="https://prm.careblue.com/patient/login.aspx?aid=@Html.ClientSession().EncAccountID&ln=@Html.ClientSession().LastName&site=1" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-a"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">View Full Site</span></span></a>
+    </div>
+
+</div>

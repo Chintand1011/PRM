@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <script src="../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <title>CareBlue Privacy Policy</title>
+    <link href="../Styles/Policy.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="ridge">
+        <img src="../Content/Images/Providers/logo_CareBluePA.png" alt="CareBlue PracticeAdvance" class="hdrImg"/>
+        <div class="top-bottom-borders">
+            <h2>FTC Fair Credit Reporting Act</h2>
+            <div class="btnImg">
+                <a href="javascript:;" onclick="closePopup()"><img src="../Content/Images/btn_close.gif" alt="Close" /></a> &nbsp;
+                <a href="javascript:;" onclick="printPopup()"><img src="../Content/Images/btn_print.gif" alt="Print" /></a>
+            </div>
+        </div>
+        <br />
+        <div>
+            <p>
+                <div style="font-size: 1.0em; color: #002897; font-weight: 600;">
+                Notice of Mandatory Compliance, Federal Trade Commission 15 USC § 1681</div>
+                <br />
+                The Fair Credit Reporting Act, or FCRA, regulates how credit reporting agencies and others 
+                handle information about consumers. FCRA also impacts those who receive information about consumers 
+                like you, a "verifier", or a user of Transunion Patient Financial Summary services.
+                <br />
+                <br />
+                CareBlue PracticeAdvance (CBPA) and Transunion requires the privacy and rights of patients be maintained. 
+                All credit inquiries must be made in compliance with the FTC Fair Credit Reporting Act.
+                Each member of your practice who is authorized for Patient Financial Summary inquiries must 
+                understand the consumer protection requirements set forth in this regulation. 
+                <br />
+                <br />
+                Here are two of the most important obligations:
+                <br />
+                <br />
+                1.  Your identity must be confirmed. Before you use Transunion Patient Financial Summary services, your 
+                organization must go through a credentialing process to establish that you have the right to receive information. 
+                Each time you use Transunion Patient Financial Summary services, you must go through a secure log in process that 
+                may require you to answer security questions to prove your identity.
+                <br />
+                <br />
+                2.  You must declare your Permissible Purpose. All users of the system must declare their reason for 
+                receiving the information. In FCRA terms, this reason is called a Permissible Purpose.
+                <br />
+                <br />
+                Please remember, these are only two FCRA requirements out of many. You should carefully review the 
+                Terms and Conditions of the service for complete details about your obligations when using Transunion Patient 
+                Financial Summary services. For more information, you may also contact the the FTC or refer to the the following website: 
+                <a href="http://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/fair-credit-reporting-act">
+                FTC Fair Credit Reporting Act</a>.
+                <br />
+                <br />
+            </p>
+        </div>
+        <div class="copyrights">
+        </div>
+        <div id="btnClose" align="center" style="margin-top: 20px;">
+            <a href="#" onclick="closePopup()">
+                <img src="../Content/Images/btn_close.gif" alt="Close" class="btn-close" /></a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" language="javascript">
+
+    $(function () {
+        $(".copyrights").html("© " + (new Date).getFullYear() + " IT Mobility, Inc. All rights reserved.");
+    });
+
+    function closePopup() {
+        window.close();
+    }
+
+    function printPopup() {
+
+        var content = $(".ridge").html();
+        var pwin = window.open('', 'print_content', "location=1,status=1,scrollbars=1, width=700,height=877");
+        pwin.document.open();
+        pwin.document.write("<html><head><link href='../Styles/Policy.css' rel='stylesheet' type='text/css' /><style type='text/css'> .btnImg{display: none;} .copyrights{border-top: 1px solid black;border-bottom: 1px solid black;padding: 5px 0 5px 0;} #btnClose{display: none;}</style></head><body onload='window.print()'><div class='ridge'>" + content + "</div></body></html>");
+        pwin.document.close();
+        setTimeout(function () {
+            closePopup();
+            pwin.close();
+        }, 1000);
+    }
+    
+</script>
+</html>

@@ -1,0 +1,78 @@
+﻿@using PatientPortal.Mobile
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    @Styles.Render("~/Content/mobileCss", "~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div data-role="page" data-theme="b">
+        <div data-role="header" class="header">
+            @if (IsSectionDefined("Header"))
+            {
+                @RenderSection("Header")
+            }
+            else
+            {
+                <h1>@ViewBag.Title</h1>
+                @Html.Partial("_LoginPartial")
+            }
+        </div>
+        <div data-role="content">
+
+            @if (Html.ClientSession().PatientID > 0)
+            {
+                <span style="font-weight: bold">@Html.ClientSession().PracticeName</span>  <br />
+                <span style="font-weight: bold">Patient: @Html.ClientSession().LastName  @Html.ClientSession().FirstName</span>
+
+            }
+
+            @RenderBody()
+
+            <div data-role="popup" id="popupBasic" data-overlay-theme="c">
+                <div data-role="header">
+                    <h3>Information</h3>
+                </div>
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                <div data-role="content">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" class="ui-bar">
+            @Html.Partial("_footer")
+        </div>
+
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    <script>
+        $(document).on("mobileinit", function () {
+            $.mobile.ajaxEnabled = false;
+            //$("form").next().remove();
+        });
+    </script>
+    @Scripts.Render("~/bundles/jquerymobile")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+
+            var message = '@TempData["Message"]';
+
+            if (message != '') {
+                $("#popupBasic p").html(message);
+                $("#popupBasic").popup('open');
+            }
+
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
